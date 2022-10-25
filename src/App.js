@@ -1,9 +1,16 @@
+import { Routes, Route} from "react-router-dom"
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+   <>
+    <Nav/>
+    <Routes>
+      <Route></Route>
+    </Routes>
+    <Footer/>
+   </>
   );
 }
 
