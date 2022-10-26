@@ -12,22 +12,21 @@ const Nav = () => {
           <img src={Logo} className='logo'></img>
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0">
             <li className="nav-item px-2">
-              <a className="nav-link" href="#">Miehet</a>
+              <a className="link" href="#">Miehet</a>
             </li>
             <li className="nav-item px-2">
-              <a className="nav-link" href="#">Naiset</a>
+              <a className="link" href="#">Naiset</a>
             </li>
             <li className="nav-item px-2">
-              <a className="nav-link" href="#">Brandit</a>
+              <a className="link" href="#">Brandit</a>
             </li>
             <li className="nav-item px-2">
-              <a className="nav-link" href="#">Tietoa meistä</a>
+              <a className="link" href="#">Tietoa meistä</a>
             </li>
           </ul>
           <div className="d-flex flex-row">
             <form className="inputForm d-flex" role="search">
               <input className=" searchInput form-control me-2" type="search" placeholder="Haku" aria-label="Search">
-
               </input>
             </form>
             <svg id="shoppingCart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-cart" viewBox="0 0 16 16">

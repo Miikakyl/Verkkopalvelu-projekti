@@ -7,12 +7,13 @@
     width: 300px;
     height: 120px;
 }
-.nav-link {
+.link {
     color: white;
-    font-size: 2vh;
+    font-size: 2.2vh;
+    text-decoration: none;
 }
 
-.nav-link:hover {
+.link:hover {
     color: #F8A700;
 }
 .searchInput {
@@ -20,7 +21,6 @@
     border:none;
 }
 .inputForm {
-    border-radius: 0;
 }
 
 #shoppingCart {
