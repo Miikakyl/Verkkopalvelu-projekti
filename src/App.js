@@ -1,5 +1,6 @@
 import { Routes, Route} from "react-router-dom"
 import Nav from './components/Nav'
+import FrontPage from './components/FrontPage'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
    <>
     <Nav/>
     <Routes>
-      <Route></Route>
+      <Route path="/" element={<FrontPage/>}></Route>
     </Routes>
     <Footer/>
    </>

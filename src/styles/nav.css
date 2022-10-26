@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #102E62;
+    height: 70px;
+}
+
+.logo {
+    width: 300px;
+    height: 120px;
+}
+.nav-link {
+    color: white;
+    font-size: 2vh;
+}
+
+.nav-link:hover {
+    color: #F8A700;
+}
+.searchInput {
+    background-color: #314c77;
+    border:none;
+}
+.inputForm {
+    border-radius: 0;
+}
+
+#shoppingCart {
+    color: white;
+    width: 25px;
+    height: 30px;
+}
