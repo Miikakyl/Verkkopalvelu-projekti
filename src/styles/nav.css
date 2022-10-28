@@ -7,6 +7,7 @@
     width: 300px;
     height: 120px;
 }
+
 .link {
     color: white;
     font-size: 2vh;
@@ -16,38 +17,60 @@
 .link:hover {
     color: #F8A700;
 }
+
 .searchInput {
     background-color: #314c77;
-    border:none;
+    border: none;
 }
+
 #shoppinCartBtn {
-    border:none;
+    border: none;
     background-color: transparent;
 }
+
 #shoppingCartIcon {
     color: white;
     width: 25px;
     height: 30px;
 }
+
 #searchBtn {
-    border:none;
+    border: none;
     background-color: transparent;
     position: absolute;
     margin-left: 170px;
     margin-left: 150px;
 }
+
 .nav-item {
-    position:relative;
+    position: relative;
 }
+
 #searchIcon {
     color: white;
     width: 20px;
     height: 30px;
 }
 
-.dropDown {
-    background-color: #102E62;
-    width: 60px;
-    height: 40px;
+#dropdownMen,
+#dropdownWomen {
+    display: none;
+    padding: 0px 15px 15px 15px;
     position: absolute;
+    text-align: center;
+    background-color: #102E62;
+    font-size: 2vh;
+    width: 150px;
+    list-style: none;
+    color: white;
+}
+
+.dropdownMen>li {
+    padding: 15px;
+}
+
+
+#menLink:hover #dropdownMen,
+#womenLink:hover #dropdownWomen {
+    display: block;
 }

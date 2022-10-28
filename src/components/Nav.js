@@ -1,10 +1,9 @@
 import '../styles/nav.css'
 import Logo from '../Collect_shoes.png'
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
-
-  const [dropDownToggle,setDropDownToggle] = useState(false)
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -15,17 +14,27 @@ const Nav = () => {
         <div className="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
           <img src={Logo} className='logo'></img>
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0">
-            <li className="nav-item px-3">
-              <a className="link" href="#">Miehet</a>
+            <li className="nav-item px-3" id="menLink">
+              <Link to="#" className="link">Miehet</Link>
+              <ul id='dropdownMen'>
+                <li>Option</li>
+                <li>Option</li>
+                <li>Option</li>
+              </ul>
+            </li>
+            <li className="nav-item px-3" id="womenLink">
+              <Link to="#" className="link">Naiset</Link>
+              <ul id='dropdownWomen'>
+                <li>Option</li>
+                <li>Option</li>
+                <li>Option</li>
+              </ul>
             </li>
             <li className="nav-item px-3">
-             <a className="link" href="#">Naiset</a>
+              <Link to="#" className="link">Brandit</Link>
             </li>
             <li className="nav-item px-3">
-              <a className="link" href="#">Brandit</a>
-            </li>
-            <li className="nav-item px-3">
-              <a className="link" href="#">Tietoa meistä</a>
+              <Link to="#" className="link">Tietoa meistä</Link>
             </li>
           </ul>
           <div className="d-flex flex-row">
