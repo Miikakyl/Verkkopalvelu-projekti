@@ -1,5 +1,6 @@
 #adImage {
     width: 100%;
+    height: 100%;
 }
 
 #adTexts {
@@ -7,14 +8,14 @@
 }
 #adTexts h1 {
     color: #F8A700;
-    font-size: 6.25em;
+    font-size: 6em;
 }
 #adTexts h2 {
     color: #F8A700;
-    font-size: 4.375em;
+    font-size: 3.5em;
 }
 #adTexts h3 {
-    font-size: 7.5em;
+    font-size: 7em;
     color: white;
 }
 
