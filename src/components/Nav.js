@@ -12,8 +12,11 @@ const Nav = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
-          <img src={Logo} className='logo'></img>
+          <img src={Logo} id='logo'></img>
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0">
+            <li className="nav-item px-3">
+              <Link to="#" className="link">Kotisivu</Link>
+            </li>
             <li className="nav-item px-3" id="menLink">
               <Link to="#" className="link">Miehet</Link>
               <ul id='dropdownMen'>

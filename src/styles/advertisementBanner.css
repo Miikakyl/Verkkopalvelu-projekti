@@ -1,0 +1,29 @@
+#adImage {
+    width: 100%;
+}
+
+#adTexts {
+    background-color: #102E62;
+}
+#adTexts h1 {
+    color: #F8A700;
+    font-size: 6.25em;
+}
+#adTexts h2 {
+    color: #F8A700;
+    font-size: 4.375em;
+}
+#adTexts h3 {
+    font-size: 7.5em;
+    color: white;
+}
+
+#adTexts button {
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: #f8A700;
+    color: #102E62;
+    border: none;
+}

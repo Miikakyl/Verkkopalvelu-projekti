@@ -3,14 +3,14 @@
     height: 60px;
 }
 
-.logo {
+#logo {
     width: 300px;
     height: 120px;
 }
 
 .link {
     color: white;
-    font-size: 2vh;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -55,18 +55,17 @@
 #dropdownMen,
 #dropdownWomen {
     display: none;
-    padding: 0px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
     position: absolute;
-    text-align: center;
     background-color: #102E62;
-    font-size: 2vh;
-    width: 150px;
+    width: 180px;
     list-style: none;
-    color: white;
+    color: white
 }
 
 .dropdownMen>li {
     padding: 15px;
+
 }
 
 
