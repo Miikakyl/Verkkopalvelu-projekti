@@ -9,7 +9,7 @@ import skeittiImage from '../Kuvat/Sivustokuvat/KengätArtboard4.jpg'
 const FrontPage = () => {
     return (
         <div className="container-fluid frontpage-container">
-            <div className="row mx-0 my-1">
+            <div className="row mx-0 my-1 d-none d-lg-block">
                 <div className="cover p-0 col-lg-12">
                 </div>
             </div>

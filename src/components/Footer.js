@@ -1,5 +1,5 @@
 import '../styles/footer.css'
-import logo from '../Collect_shoes.png'
+import logo from '../Kuvat/Sivustokuvat/Collect_shoes.png'
 
 const Footer = () => {
     return (
