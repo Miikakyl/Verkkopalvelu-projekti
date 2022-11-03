@@ -1,11 +1,16 @@
 import '../styles/productCategory.css'
+import { Link } from 'react-router-dom'
 
 const ProductCategory = (props) => {
     return (
         <div className="col-lg-4 m-0 p-0 d-flex justify-content-center align-items-center"
         style={{background: 'url' + '(' + props.image + ')', backgroundSize: 'cover',height:'60vh' }}>
-            <div className="imageOverlay d-flex justify-content-center align-items-center">
+            <div className="imageOverlay d-flex flex-column justify-content-center align-items-center">
                 <h1>{props.categoryName}</h1>
+                <div className="d-flex">
+                    <Link className="d-inline genderLink">Miehet</Link>
+                    <Link className="d-inline genderLink">Naiset</Link>
+                </div>
             </div>
         </div>
       );

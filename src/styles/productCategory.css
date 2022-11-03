@@ -4,5 +4,17 @@
     background-color: rgba(16,46,98,0.6);
     color: #f8A700;
     letter-spacing: 5px;
-    font-size: 3rem;
+    font-size: 3em;
 }
+
+.genderLink {
+    color: white;
+    font-size: 0.5em;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.genderLink:hover {
+    color: #F8A700;
+}
+
