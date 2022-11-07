@@ -20,17 +20,17 @@ const Nav = () => {
             <li className="nav-item" id="menLink">
               <Link to="#" className="link">Miehet</Link>
               <ul id='dropdownMen'>
-                <li>Option</li>
-                <li>Option</li>
-                <li>Option</li>
+                <li><Link className="dropDownLinks">Kävelykengät</Link></li>
+                <li><Link className="dropDownLinks">Koripallokengät</Link></li>
+                <li><Link className="dropDownLinks">Skeittikengät</Link></li>
               </ul>
             </li>
             <li className="nav-item" id="womenLink">
               <Link to="#" className="link">Naiset</Link>
               <ul id='dropdownWomen'>
-                <li>Option</li>
-                <li>Option</li>
-                <li>Option</li>
+                <li><Link className="dropDownLinks">Kävelykengät</Link></li>
+                <li><Link className="dropDownLinks">Koripallokengät</Link></li>
+                <li><Link className="dropDownLinks">Skeittikengät</Link></li>
               </ul>
             </li>
             <li className="nav-item">

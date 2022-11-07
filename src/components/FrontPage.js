@@ -16,7 +16,7 @@ const FrontPage = () => {
             <div className="row mx-0">
                 <AdvertisementBanner />
             </div>
-            <div className="row mx-0 my-1 flex-lg-nowrap">
+            <div className="row mx-0 my-1 d-flex flex-lg-nowrap">
                 <ProductCategory image={kavelyImage} categoryName={"Kävelykengät"}/>
                 <ProductCategory image={koripalloImage} categoryName={"Koripallokengät"} />
                 <ProductCategory image={skeittiImage} categoryName={"Skeittikengät"} />

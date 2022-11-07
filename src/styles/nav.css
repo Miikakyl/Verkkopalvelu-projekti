@@ -14,7 +14,6 @@
 
 .link {
     color: white;
-    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -66,12 +65,16 @@
     list-style: none;
     color: white
 }
-
-.dropdownMen>li {
-    padding: 15px;
-
+.dropDownLinks {
+    text-decoration: none;
+    color:white;
 }
-
+.dropdownMen > li {
+    padding: 15px;
+}
+.dropDownLinks:hover {
+    color: #F8A700;
+}
 
 #menLink:hover #dropdownMen,
 #womenLink:hover #dropdownWomen {
