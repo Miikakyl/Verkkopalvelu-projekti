@@ -25,10 +25,18 @@
     background-color: #314c77;
     border: none;
 }
-
+#loginSignBtn {
+    border: none;
+    background-color: transparent;
+}
 #shoppinCartBtn {
     border: none;
     background-color: transparent;
+}
+#loginSignIcon {
+    color: white;
+    width: 25px;
+    height: 30px;
 }
 
 #shoppingCartIcon {
