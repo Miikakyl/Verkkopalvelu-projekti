@@ -33,8 +33,15 @@ const Nav = () => {
                 <li><Link className="dropDownLinks">Skeittikengät</Link></li>
               </ul>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" id="dropdownLink">
               <Link to="#" className="link">Brandit</Link>
+              <ul id="dropdownBrand">
+                <li><Link className="dropDownLinks">Adidas</Link></li>
+                <li><Link className="dropDownLinks">Converse</Link></li>
+                <li><Link className="dropDownLinks">Nike</Link></li>
+                <li><Link className="dropDownLinks">Reebok</Link></li>
+                <li><Link className="dropDownLinks">Vans</Link></li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link to="#" className="link">Tietoa meistä</Link>

@@ -36,7 +36,7 @@
 #loginSignIcon {
     color: white;
     width: 25px;
-    height: 30px;
+    height: 30px;   
 }
 
 #shoppingCartIcon {
@@ -64,7 +64,8 @@
 }
 
 #dropdownMen,
-#dropdownWomen {
+#dropdownWomen,
+#dropdownBrand {
     display: none;
     padding: 15px 15px 15px 15px;
     position: absolute;
@@ -85,7 +86,8 @@
 }
 
 #menLink:hover #dropdownMen,
-#womenLink:hover #dropdownWomen {
+#womenLink:hover #dropdownWomen,
+#dropdownLink:hover #dropdownBrand {
     display: block;
 }
 @media only screen and (max-width: 1051px){
