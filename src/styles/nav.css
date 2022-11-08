@@ -92,7 +92,7 @@
 }
 
 #shoppingcartShow {
-    display: none;
+    /* display: none; */
     margin-left: -301px;
     padding: 15px 15px 15px 15px;
     position: absolute;
@@ -115,10 +115,22 @@
     background: #f8A700;
 }
 
+.checkoutBtnArea {
+    background-color: #102E62;
+    width: 350px;
+    height: 50px;
+    margin-left: -15px;
+}
+
+.checkoutBtn {
+    background-color: #f8A700;
+    color: #102E62;
+    border: 1px solid #102E62;;
+}
+
 #dropdownLink:hover #dropdownMen,
 #dropdownLink:hover #dropdownWomen,
-#dropdownLink:hover #dropdownBrand,
-.shoppingcartContainer:hover #shoppingcartShow {
+#dropdownLink:hover #dropdownBrand {
     display: block;
 }
 
