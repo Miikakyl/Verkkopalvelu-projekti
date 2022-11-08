@@ -3,7 +3,7 @@
     height: 60px;
 }
 
-.nav-item:not(.navbar-nav:first-child,.navbar-nav:last-child) {
+.nav-item:not(.navbar-nav:first-child, .navbar-nav:last-child) {
     padding: 8px;
 }
 
@@ -25,21 +25,24 @@
     background-color: #314c77;
     border: none;
 }
+
 #loginSignBtn {
     border: none;
     background-color: transparent;
 }
-#shoppinCartBtn {
+
+#shoppincartBtn {
     border: none;
     background-color: transparent;
 }
+
 #loginSignIcon {
     color: white;
     width: 25px;
-    height: 30px;   
+    height: 30px;
 }
 
-#shoppingCartIcon {
+#shoppingcartIcon {
     color: white;
     width: 25px;
     height: 30px;
@@ -74,23 +77,52 @@
     list-style: none;
     color: white
 }
+
 .dropDownLinks {
     text-decoration: none;
-    color:white;
+    color: white;
 }
-.dropdownMen > li {
+
+.dropdownMen>li {
     padding: 15px;
 }
+
 .dropDownLinks:hover {
     color: #F8A700;
 }
 
-#menLink:hover #dropdownMen,
-#womenLink:hover #dropdownWomen,
-#dropdownLink:hover #dropdownBrand {
+#shoppingcartShow {
+    display: none;
+    margin-left: -301px;
+    padding: 15px 15px 15px 15px;
+    position: absolute;
+    background-color: #102E62;
+    width: 350px;
+    height: 300px;
+}
+
+.shoppingcartArea {
+    scrollbar-color: #f8A700 #07204a;
+    overflow: auto;
+}
+
+.shoppingcartArea::-webkit-scrollbar {
+    background: #07204a;
+    width: 3px;
+}
+
+.shoppingcartArea::-webkit-scrollbar-thumb {
+    background: #f8A700;
+}
+
+#dropdownLink:hover #dropdownMen,
+#dropdownLink:hover #dropdownWomen,
+#dropdownLink:hover #dropdownBrand,
+.shoppingcartContainer:hover #shoppingcartShow {
     display: block;
 }
-@media only screen and (max-width: 1051px){
+
+@media only screen and (max-width: 1012px) {
     .link {
         font-size: 1em;
     }

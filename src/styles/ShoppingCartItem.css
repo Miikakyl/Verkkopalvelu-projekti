@@ -1,0 +1,28 @@
+.productName {
+    color: white;
+    font-size: 1.2em;
+}
+
+.productPrice {
+    color: white;
+    font-size: 1em;
+}
+
+.productImage {
+    width: 100px;
+    height: 100px;
+}
+
+.deleteProductBtn {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+}
+
+.deleteProduct {
+    padding: 0;
+    color: white;
+    width: 25px;
+    height: 25px;
+}
