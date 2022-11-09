@@ -1,30 +1,24 @@
 .navbar {
     background-color: #102E62;
+    padding-left: 8px;
+    padding-right: 8px;
     height: 60px;
 }
 
 .nav-item:not(.navbar-nav:first-child, .navbar-nav:last-child) {
-    padding: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
 }
 
 #logo {
     width: 300px;
-    height: 120px;
 }
 
-.link {
-    color: white;
-    text-decoration: none;
-}
-
-.link:hover {
-    color: #F8A700;
-}
-
-.searchInput {
-    background-color: #314c77;
-    border: none;
-}
 
 #loginSignBtn {
     border: none;
@@ -53,11 +47,11 @@
     background-color: transparent;
     position: absolute;
     margin-left: 170px;
-    margin-left: 150px;
 }
 
-.nav-item {
-    position: relative;
+.searchInput {
+    background-color: #314c77;
+    border: none;
 }
 
 #searchIcon {
@@ -66,76 +60,84 @@
     height: 30px;
 }
 
-#dropdownMen,
-#dropdownWomen,
-#dropdownBrand {
-    display: none;
-    padding: 15px 15px 15px 15px;
-    position: absolute;
+#hamburgerIcon {
+    color: white;
+    width: 25px;
+    height: 30px;
+}
+
+#navbarSupportedContent {
+    background-color: #102E62;
+}
+
+.dropdown-menu {
+    padding: 15px;
     background-color: #102E62;
     width: 180px;
     list-style: none;
-    color: white
+    color: white;
+    border: none;
 }
 
-.dropDownLinks {
-    text-decoration: none;
+.dropdown-item {
     color: white;
 }
 
-.dropdownMen>li {
-    padding: 15px;
-}
-
-.dropDownLinks:hover {
+.nav-link:hover,
+.dropdown-item:hover {
     color: #F8A700;
-}
-
-#shoppingcartShow {
-    /* display: none; */
-    margin-left: -301px;
-    padding: 15px 15px 15px 15px;
-    position: absolute;
     background-color: #102E62;
-    width: 350px;
-    height: 300px;
+    ;
 }
 
-.shoppingcartArea {
-    scrollbar-color: #f8A700 #07204a;
-    overflow: auto;
+.dropdown-toggle::after {
+    content: none;
 }
 
-.shoppingcartArea::-webkit-scrollbar {
-    background: #07204a;
-    width: 3px;
-}
-
-.shoppingcartArea::-webkit-scrollbar-thumb {
-    background: #f8A700;
-}
-
-.checkoutBtnArea {
-    background-color: #102E62;
-    width: 350px;
-    height: 50px;
-    margin-left: -15px;
-}
-
-.checkoutBtn {
-    background-color: #f8A700;
-    color: #102E62;
-    border: 1px solid #102E62;;
-}
-
-#dropdownLink:hover #dropdownMen,
-#dropdownLink:hover #dropdownWomen,
-#dropdownLink:hover #dropdownBrand {
+.nav-item:hover .dropdown-menu {
     display: block;
 }
 
-@media only screen and (max-width: 1012px) {
-    .link {
-        font-size: 1em;
+@media only screen and (max-width: 1085px) {
+    .nav-link {
+        font-size: 0.7em;
     }
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar {
+        padding: 0;
+    }
+    .navbar-nav {
+        align-items: start;
+    }
+
+    .searchInput {
+        width: 120px;
+        min-width: 100px;
+    }
+
+    #searchBtn {
+        margin-left: 100px;
+    }
+
+    #logo {
+        padding-left: 4px;
+        width: 130px;
+        height: 60px;
+        order: 1;
+    }
+
+    #navbarSupportedContent {
+        order: 3;
+    }
+
+    .buttonContainer {
+        order: 2;
+        padding-right: 4px;
+    }
+    .dropdown-menu {
+        padding: 5px;
+    }
+
 }
