@@ -1,6 +1,6 @@
 import '../styles/shoppingcartItem.css'
 
-const ShoppingCartItem = (props) => {
+const ShoppingcartItem = (props) => {
     return (
         <div className="d-flex border-bottom border-white py-3">
             <img className="productImage" src={props.image}></img>
@@ -20,4 +20,4 @@ const ShoppingCartItem = (props) => {
     );
 }
 
-export default ShoppingCartItem;
+export default ShoppingcartItem;
