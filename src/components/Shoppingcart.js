@@ -1,5 +1,6 @@
 import ShoppingcartItem from './ShoppingcartItem';
 import '../styles/shoppingcart.css'
+
 const Shoppingcart = () => {
     return (
         <div className="position-relative shoppingcartContainer">
