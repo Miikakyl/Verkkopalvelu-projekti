@@ -14,7 +14,7 @@ const Nav = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
-          <img src={Logo} id='logo'></img>
+          <img src={Logo} id='logo' alt=""></img>
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0">
             <li className="nav-item">
               <Link to="#" className="link">Kotisivu</Link>
