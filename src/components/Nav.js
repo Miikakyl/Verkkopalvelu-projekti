@@ -9,9 +9,9 @@ import Shoppingcart from './Shoppingcart'
 const Nav = () => {
   //Tähän komponenttiin fetchi mikä hakee tuotteet taulusta shoppingCartShow:n ja delete iconia painamalla voi poistaa.
   return (
-    <nav className="navbar navbar-expand-lg position-relative">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid p-0">
-        <img src={Logo} id='logo'></img>
+        <img src={Logo} alt="" id='logo'></img>
         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0 d-flex">
             <li className='nav-item'>

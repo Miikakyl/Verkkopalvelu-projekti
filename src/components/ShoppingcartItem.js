@@ -3,7 +3,7 @@ import '../styles/shoppingcartItem.css'
 const ShoppingcartItem = (props) => {
     return (
         <div className="d-flex border-bottom border-white py-3">
-            <img className="productImage" src={props.image}></img>
+            <img className="productImage" src={props.image} alt=""></img>
             <div className="d-flex flex-column align-items-start px-2">
                 <h1 className="productName">{props.name}</h1>
                 <h2 className="productPrice">{props.price}€</h2>
