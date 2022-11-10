@@ -83,12 +83,13 @@
     color: white;
 }
 
-.nav-link:hover,
-.dropdown-item:hover {
+.nav-link:focus, .nav-link:hover,
+.dropdown-item:focus, .dropdown-item:hover,
+.dropdown-item:active {
     color: #F8A700;
     background-color: #102E62;
-    ;
 }
+
 
 .dropdown-toggle::after {
     content: none;
@@ -97,7 +98,11 @@
 .nav-item:hover .dropdown-menu {
     display: block;
 }
-
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    color:#314c77;
+}
 @media only screen and (max-width: 1085px) {
     .nav-link {
         font-size: 0.7em;
