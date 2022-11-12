@@ -13,7 +13,7 @@ const AdvertisementBanner = () => {
                 </div>
             </div>
             <div className="col-lg-6 m-0 p-0 d-none d-lg-block">
-                <img id="adImage" src={advertisementImage}></img>
+                <img id="adImage" src={advertisementImage} alt=""></img>
             </div>
         </>
       );
