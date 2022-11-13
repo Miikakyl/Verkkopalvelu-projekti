@@ -20,20 +20,22 @@ return (
         <h4>kirjaudu sisään</h4>
     </div>
 
-    <div className="form-information">
+    <div className="form-logIn">
         <label>Sähköposti</label>
         <input type="email" placeholder="Syötä sähköpostiosoite" required></input>
         <label>Salasana</label>
         <input type="password" placeholder="Syötä salasana" required></input>
         <a href="/#"> Unohditko salasanan</a>
-    </div>
-
-    <div className="form-buttons">
-        <button url="#">Kirjaudu sisään tunnuksillasi</button>
-        <button url="#">Rekistöröidy asiakkaaksi</button>
+        <button type="submit">Kirjaudu sisään tunnuksillasi</button>    
     </div>
 
     </form>
+
+    <div className="form-register">
+        <a href="/#">
+        <button>Rekistöröidy asiakkaaksi</button>
+        </a>
+    </div>
 </div>
 </div>
 </div>
