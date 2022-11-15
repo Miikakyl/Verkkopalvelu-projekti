@@ -16,7 +16,7 @@ const Nav = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0 d-flex">
             <li className='nav-item'>
-              <Link className='nav-link' to="#">Kotisivu</Link>
+              <Link className='nav-link' to="/">Kotisivu</Link>
             </li>
 
             <li className="nav-item dropdown">
@@ -26,7 +26,7 @@ const Nav = () => {
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMen">
                 <Link to="#" className="dropdown-item" href="#">Kävelykengät</Link>
                 <Link to="#" className="dropdown-item" href="#">Koripallokengät</Link>
-                <Link to="#" className="dropdown-item" href="#">Skeittikengät</Link>
+                <Link to="/mens" className="dropdown-item" href="#">Skeittikengät</Link>
               </div>
             </li>
 
