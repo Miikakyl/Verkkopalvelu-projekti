@@ -14,6 +14,7 @@
 @media only screen and (max-width: 375px), (max-width: 425px) {
     .object {
       width: 100%;
+      z-index: 2;
     }
   }
 

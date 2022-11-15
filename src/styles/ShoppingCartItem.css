@@ -1,20 +1,20 @@
 .productName {
-    color: white;
-    font-size: 1.2em;
+    color: #f8A700;
+    font-size: 0.9em;
 }
 
 .productPrice {
-    color: white;
+    color: #dbdbdb;
     font-size: 1em;
 }
 
 .productImage {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
 }
 
 .deleteProductBtn {
-    width: fit-content;
+    width: 40px;
     height: fit-content;
     background-color: transparent;
     border: none;
@@ -25,4 +25,13 @@
     color: white;
     width: 25px;
     height: 25px;
+}
+
+.productInfoText {
+    color:#dbdbdb;
+    margin-bottom: 1px;
+    font-size: 0.6em;
+}
+.productInfoContainer {
+    width: 150x;
 }
