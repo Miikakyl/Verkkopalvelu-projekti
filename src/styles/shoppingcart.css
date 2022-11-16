@@ -43,15 +43,16 @@
     border: 1px solid #102E62;
 }
 
-.shoppingcartContainer:hover .shoppingcartShow {
-    display: block !important;
-}
-
 .checkoutTexts {
     margin: 0;
     color: #dbdbdb;
 }
 
+@media only screen and (min-width: 992px) {
+    .shoppingcartContainer:hover .shoppingcartShow {
+        display: block !important;
+    }
+}
 @media only screen and (max-width: 375px),
 (max-width: 425px) {
 
