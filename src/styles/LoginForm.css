@@ -19,7 +19,7 @@
   }
 
  .loginFormContainer:hover .object {
-    display: block;
+    display: block !important;;
 }
 
 .form {

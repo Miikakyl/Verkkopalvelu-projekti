@@ -4,12 +4,9 @@ import React, { useState } from 'react'
 function LoginForm() {
 
     const [isActive, setIsActive] = useState(false)
-
     const handleClick = () => {
-
         setIsActive(!isActive)
     }
-
     return (
         <div className="loginFormContainer">
 
@@ -21,7 +18,7 @@ function LoginForm() {
             </button>
 
 
-            <div className="object" style={{ display: isActive ? "block" : "none" }}>
+            <div className="object" style={{display: isActive? "block" : "none"}}>
                 <div className="form">
                     <form>
 

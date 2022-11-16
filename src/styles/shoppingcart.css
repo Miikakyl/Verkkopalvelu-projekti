@@ -44,7 +44,7 @@
 }
 
 .shoppingcartContainer:hover .shoppingcartShow {
-    display: block;
+    display: block !important;
 }
 
 .checkoutTexts {
