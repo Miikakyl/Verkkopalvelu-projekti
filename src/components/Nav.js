@@ -24,7 +24,7 @@ const Nav = () => {
                 Miehet
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMen">
-                <Link to="#" className="dropdown-item" href="#">Kävelykengät</Link>
+                <Link to="/Walkshoes" className="dropdown-item" href="#">Kävelykengät</Link>
                 <Link to="#" className="dropdown-item" href="#">Koripallokengät</Link>
                 <Link to="/mens" className="dropdown-item" href="#">Skeittikengät</Link>
               </div>

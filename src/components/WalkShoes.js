@@ -1,0 +1,92 @@
+import '../styles/WalkShoes.css'
+
+function WalkShoes() {
+    return (
+        <div id="walkshoes">
+
+            <div className="col-12 ">
+            <img src={require('../Kuvat/Sivustokuvat/photo.jpg')} alt=""/>
+            </div>
+
+            <div className="col-12">
+                <p>30 päivän palautusoikeus</p>
+                <p>Ilmainen toimitus ja palautus</p>
+            </div>
+
+            <div className="col-12">
+                <h1>Miesten kävelykengät</h1>
+            </div>
+
+            <div className="container">
+                <div className="row">
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirForce_1/Nike_AirForce_1_1.png')} alt=""/>
+                        <h4>Nike Airforce</h4>
+                        <p>100,00€</p>
+                        <span></span>
+                        </a>                      
+                        </div>
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_720/Nike_AirMax_720_1.png')} alt=""/>
+                        <h4>Nike Airforce Max 720</h4>
+                        <p>120,00€</p>
+                        <span></span>
+                        <span></span>
+                        </a>
+                        </div>
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Adidas_Y3/Adidas_Y3_1.png')} alt=""/>
+                        <h4>Adidas Y3</h4>
+                        <p>200,00€</p>
+                        <span></span>
+                        </a>
+                        </div>
+                        
+                </div>
+                <div className="row">
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_97/Nike_AirMax_97_1.png')} alt=""/>
+                        <h4>Nike Airforce 97</h4>
+                        <p>90,00€</p>
+                        <span></span>
+                        </a>
+                        </div>
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Yeezy/Yeezy_1.png')} alt=""/>
+                        <h4>Yeezy</h4>
+                        <p>200,00€</p>
+                        <span></span>
+                        </a>
+                        </div>
+
+                        <div className="col-xs-12 col-md-4 col-xl-4">
+                        <a href={"/#"}>
+                        <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Adidas_Gazelle/Adidas_Gazelle_1.png')} alt=""/>
+                        <h4>Adidas Gazelle</h4>
+                        <p>80,00€</p>
+                        <span></span>
+                        </a>
+                        </div>
+
+                </div>
+            </div>
+          
+                
+
+           
+
+        </div>
+    )
+}
+
+export default WalkShoes
