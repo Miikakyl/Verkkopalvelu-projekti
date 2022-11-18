@@ -73,6 +73,9 @@ form a:hover {
     .loginFormContainer:hover .object {
         display: block !important;
     }
+    .loginFormContainer:hover #loginSignIcon {
+        color: #F8A700 !important;
+    }
 }
 @media only screen and (max-width: 375px), (max-width: 425px) {
     .object {

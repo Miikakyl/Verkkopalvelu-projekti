@@ -52,6 +52,9 @@
     .shoppingcartContainer:hover .shoppingcartShow {
         display: block !important;
     }
+    .shoppingcartContainer:hover #shoppingcartIcon {
+        color: #F8A700 !important;
+    }
 }
 @media only screen and (max-width: 375px),
 (max-width: 425px) {
