@@ -17,7 +17,7 @@ function WalkShoes() {
                 <h1>Miesten kävelykengät</h1>
             </div>
 
-            <div className="container">
+            <div className="container walk">
                 <div className="row">
 
                         <div className="col-xs-12 col-md-4 col-xl-4">

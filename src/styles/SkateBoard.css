@@ -1,49 +1,49 @@
-#walkshoes > div:nth-child(1) img {
+#SkateBoard > div:nth-child(1) img {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
 }
 
-#walkshoes > div:nth-child(2) {
+#SkateBoard > div:nth-child(2) {
     height: 40px;
     background-color:  #F8A700;
 }
 
-#walkshoes > div:nth-child(2) p:first-child {
+#SkateBoard > div:nth-child(2) p:first-child {
     float: left;
     padding-left: 200px;
     padding-top: 6px;
 }
 
-#walkshoes > div:nth-child(2) p:last-child {
+#SkateBoard > div:nth-child(2) p:last-child {
     float: right;
     padding-right: 200px;
     padding-top: 6px;
 }
 
-#walkshoes a {
+#SkateBoard a {
     text-decoration: none;
     color: black;
 }
 
 @media only screen and (max-width: 768px), (max-width: 800px) {
-    #walkshoes > div:nth-child(2) p:first-child {
+    #SkateBoard > div:nth-child(2) p:first-child {
         padding-left: 100px;
     }
     
-    #walkshoes > div:nth-child(2) p:last-child {
+    #SkateBoard > div:nth-child(2) p:last-child {
         padding-right: 100px;
     }
 }
 
 @media only screen and (max-width: 425px), (max-width: 480px), (max-width: 482px), (max-width: 582px)  {
-    #walkshoes > div:nth-child(2) p:first-child {
+    #SkateBoard > div:nth-child(2) p:first-child {
         padding-left: 30px;
         font-size: 14px;
         padding-top: 8px;
     }
     
-    #walkshoes > div:nth-child(2) p:last-child {
+    #SkateBoard > div:nth-child(2) p:last-child {
         padding-right: 30px;
         font-size: 14px;
         padding-top: 8px;
@@ -51,13 +51,13 @@
 }
 
 @media only screen and (max-width: 375px), (max-width: 390px), (max-width: 392px) {
-    #walkshoes > div:nth-child(2) p:first-child {
+    #SkateBoard > div:nth-child(2) p:first-child {
         padding-left: 30px;
         font-size: 12px;
         padding-top: 10px;
     }
     
-    #walkshoes > div:nth-child(2) p:last-child {
+    #SkateBoard > div:nth-child(2) p:last-child {
         padding-right: 30px;
         font-size: 12px;
         padding-top: 10px;
@@ -65,22 +65,22 @@
 }
 
 @media only screen and (max-width: 350px) {
-    #walkshoes > div:nth-child(2) p:first-child {
+    #SkateBoard > div:nth-child(2) p:first-child {
         display: none;
     }
     
-    #walkshoes > div:nth-child(2) p:last-child {
+    #SkateBoard > div:nth-child(2) p:last-child {
         display: none;
     }
 }
 
-#walkshoes > div:nth-child(3) {
+#SkateBoard > div:nth-child(3) {
     height: 80px;
     background-color: #102E62;
     color: white;
 }
 
-#walkshoes > div:nth-child(3) h1:first-child {
+#SkateBoard > div:nth-child(3) h1:first-child {
     text-align: center;
     padding-top: 16px;
 }
@@ -119,7 +119,7 @@
 }
 
 
-.container.walk > div:nth-child(1) span {
+.container.skate > div:nth-child(1) span {
     height: 15px;
     width: 15px;
     background-color: black;
@@ -129,12 +129,15 @@
     display: inline-block
 }
 
-.container.walk > div:nth-child(1) div:nth-child(2) span:last-child {
-    background-color: blueviolet;
-    left: 4px;
+.container.skate > div:nth-child(1) div:nth-child(2) span {
+    background-color: green;
 }
 
-.container.walk > div:nth-child(2) span {
+.container.skate > div:nth-child(1) div:nth-child(3) span {
+    background-color: red;
+}
+
+.container.skate > div:nth-child(2) span {
     height: 15px;
     width: 15px;
     background-color: black;
@@ -144,24 +147,18 @@
     display: inline-block
 } 
 
-.container.walk > div:nth-child(2) div:nth-child(1) span {
+.container.skate > div:nth-child(2) div:nth-child(1) span {
+    background-color: #dbdbdb;
+}
+
+/* .container > div:nth-child(2) div:nth-child(1) span {
     background-color: rgb(36, 151, 200);
 } 
 
-.container.walk > div:nth-child(2) div:nth-child(2) span {
+.container > div:nth-child(2) div:nth-child(2) span {
     background-color: rgb(206, 207, 192);
 } 
 
-.container.walk > div:nth-child(2) div:nth-child(3) span {
+.container > div:nth-child(2) div:nth-child(3) span {
     background-color: rgb(36, 36, 157);
-} 
-
-
-
-
-
-
-
-
-
-
+}  */
