@@ -8,8 +8,8 @@ const ProductCategory = (props) => {
             <div className="imageOverlay d-flex flex-column justify-content-center align-items-center">
                 <h1>{props.categoryName}</h1>
                 <div className="d-flex">
-                    <Link to="/mens" className="d-inline genderLink">Miehet</Link>
-                    <Link className="d-inline genderLink">Naiset</Link>
+                    <Link to={props.menLink} className="d-inline genderLink">Miehet</Link>
+                    <Link to={props.womenLink} className="d-inline genderLink">Naiset</Link>
                 </div>
             </div>
         </div>

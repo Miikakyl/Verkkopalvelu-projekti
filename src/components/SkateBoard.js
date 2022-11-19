@@ -1,6 +1,6 @@
 import '../styles/SkateBoard.css'
 
-function SkateBoard() {
+function SkateBoard(props) {
     return (
         <div id="SkateBoard">
 
@@ -14,7 +14,7 @@ function SkateBoard() {
             </div>
 
             <div className="col-12">
-                <h1>Miesten skeittikengät</h1>
+                <h1>{props.categoryHeader}</h1>
             </div>
 
             <div className="container skate">

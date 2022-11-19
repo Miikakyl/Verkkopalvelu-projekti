@@ -13,8 +13,10 @@ const App = () => {
     <Routes>
       <Route path="/" element={<FrontPage/>}></Route>
       {/* <Route path="mens" element={<Mens/>}></Route> */}
-      <Route path="SkateBoard" element={<SkateBoard/>}></Route>
-      <Route path="WalkShoes" element={<WalkShoes/>}></Route>
+      <Route path="SkateBoardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" shoeSize={[38,39,40,41]}/>}></Route>
+      <Route path="SkateBoardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" shoeSize={[40,41,42,44]}/>}></Route>
+      <Route path="WalkShoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" shoeSize={[38,39,40,41]}/>}></Route>
+      <Route path="WalkShoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" shoeSize={[40,41,42,44]}/>}></Route>
     </Routes>
     <Footer/>
    </>

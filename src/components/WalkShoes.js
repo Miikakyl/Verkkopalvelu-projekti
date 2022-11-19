@@ -1,6 +1,6 @@
 import '../styles/WalkShoes.css'
 
-function WalkShoes() {
+function WalkShoes(props) {
     return (
         <div id="walkshoes">
 
@@ -14,7 +14,7 @@ function WalkShoes() {
             </div>
 
             <div className="col-12">
-                <h1>Miesten kävelykengät</h1>
+                <h1>{props.categoryHeader}</h1>
             </div>
 
             <div className="container walk">
