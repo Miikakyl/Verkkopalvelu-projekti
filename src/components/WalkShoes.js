@@ -32,7 +32,7 @@ function WalkShoes() {
                         <div className="col-xs-12 col-md-4 col-xl-4">
                         <a href={"/#"}>
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_720/Nike_AirMax_720_1.png')} alt=""/>
-                        <h4>Nike Airforce Max 720</h4>
+                        <h4>Nike Airforce 720</h4>
                         <p>120,00€</p>
                         <span></span>
                         <span></span>
