@@ -18,7 +18,7 @@ const FrontPage = () => {
             </div>
             <div className="row mx-0 my-1 d-flex flex-lg-nowrap">
                 <ProductCategory womenLink={"/WalkShoesWomen"} menLink={"/WalkShoesMen"} image={kavelyImage} categoryName={"Kävelykengät"} />
-                <ProductCategory image={koripalloImage} categoryName={"Koripallokengät"} />
+                <ProductCategory  womenLink={"/BasketballWomen"} menLink={"/BasketballMen"} image={koripalloImage} categoryName={"Koripallokengät"} />
                 <ProductCategory womenLink={"/SkateBoardWomen"} menLink={"/SkateBoardMen"} image={skeittiImage} categoryName={"Skeittikengät"} />
             </div>
         </div>
