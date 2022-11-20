@@ -119,7 +119,7 @@
 }
 
 
-.container > div:nth-child(1) span {
+.container.Basketball > div:nth-child(1) span {
     height: 15px;
     width: 15px;
     background-color: black;
@@ -129,15 +129,15 @@
     display: inline-block
 }
 
-.container > div:nth-child(1) div:nth-child(2) span {
-    background-color: green;
+.container.Basketball > div:nth-child(1) div:nth-child(1) span {
+    background-color: orange;
 }
 
-.container > div:nth-child(1) div:nth-child(3) span {
-    background-color: red;
+.container.Basketball > div:nth-child(1) div:nth-child(3) span {
+    background-color: grey;
 }
 
-.container > div:nth-child(2) span {
+.container.Basketball > div:nth-child(2) span {
     height: 15px;
     width: 15px;
     background-color: black;
@@ -147,6 +147,6 @@
     display: inline-block
 } 
 
-.container > div:nth-child(2) div:nth-child(1) span {
+/* .container.Basketball > div:nth-child(2) div:nth-child(1) span {
     background-color: #dbdbdb;
-}
+} */

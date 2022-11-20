@@ -24,7 +24,7 @@ const Basketball = (props) => {
                         <Link to="#">
                             <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Jordan_1_Low/Jordan_1_Low_1.jpg')} alt="" />
                             <h4>Jordan 1 Low</h4>
-                            <p>150,00€</p>
+                            <p>170,00€</p>
                             <span></span>
                         </Link>
                     </div>
@@ -33,16 +33,16 @@ const Basketball = (props) => {
                         <Link to="#">
                             <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Jordan_1_Mid/Jordan_1_Mid_1.png')} alt="" />
                             <h4>Jordan 1 Mid</h4>
-                            <p>50,00€</p>
+                            <p>150,00€</p>
                             <span></span>
                         </Link>
                     </div>
 
                     <div className="col-xs-12 col-md-4 col-xl-4">
                         <Link to="#">
-                            <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_Authentic/Vans_Authentic_1.png')} alt="" />
-                            <h4>Vans Authentic</h4>
-                            <p>50,00€</p>
+                            <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_KD/Nike_KD_1.png')} alt="" />
+                            <h4>Nike KD</h4>
+                            <p>70,00€</p>
                             <span></span>
                         </Link>
                     </div>
@@ -52,9 +52,9 @@ const Basketball = (props) => {
 
                     <div className="col-xs-12 col-md-4 col-xl-4">
                         <Link to="#">
-                            <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_Blazer_Low/Nike_Blazer_Low_1.png')} alt="" />
-                            <h4>Nike Blazer</h4>
-                            <p>60,00€</p>
+                            <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Converse/Converse_1.png')} alt="" />
+                            <h4>Converse</h4>
+                            <p>120,00€</p>
                             <span></span>
                         </Link>
                     </div>
