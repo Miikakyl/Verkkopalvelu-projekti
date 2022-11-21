@@ -22,7 +22,7 @@ function WalkShoes(props) {
                 <div className="row">
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="demotuote1">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirForce_1/Nike_AirForce_1_1.png')} alt=""/>
                         <h4>Nike Airforce</h4>
                         <p>100,00€</p>
@@ -31,7 +31,7 @@ function WalkShoes(props) {
                         </div>
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="demotuote2">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_720/Nike_AirMax_720_1.png')} alt=""/>
                         <h4>Nike Airforce 720</h4>
                         <p>120,00€</p>
