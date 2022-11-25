@@ -7,6 +7,7 @@ import WalkShoes from "./components/WalkShoes"
 import SkateBoard from "./components/SkateBoard"
 import Basketball from "./components/Basketball"
 import Slipon from "./components/Products/SlipOn"
+import Demotuote from "./components/Demotuote"
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
       <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" shoeSize={[38,39,40,41]}/>}></Route>
       <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="SlipOn" element={<Slipon categoryHeader="Vans SlipOn" shoeSize={[40,41,42,44]}/>}></Route>
+
+      <Route path="WalkshoesMen/demotuote1" element={<Demotuote name="kenkä" price="45" shoeSize={[38,39,40,41]}/>}></Route>
+      <Route path="WalkshoesMen/demotuote2" element={<Demotuote name="kenkä" price="48"shoeSize={[38,39,40,41]} />}></Route>
     </Routes>
     <Footer/>
    </>
