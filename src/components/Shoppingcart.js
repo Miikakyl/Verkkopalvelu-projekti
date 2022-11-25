@@ -1,4 +1,4 @@
-import ShoppingcartItem from './shoppingcartItem';
+import ShoppingcartItem from './ShoppingcartItem';
 import React, { useState } from 'react';
 import '../styles/shoppingcart.css'
 
