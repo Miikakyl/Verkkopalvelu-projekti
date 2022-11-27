@@ -2,6 +2,7 @@ import { Routes, Route} from "react-router-dom"
 import Nav from './components/Nav'
 import FrontPage from './components/FrontPage'
 import Footer from './components/Footer'
+import Brands from './components/Brands'
 import WalkShoes from "./components/WalkShoes"
 import SkateBoard from "./components/SkateBoard"
 import Basketball from "./components/Basketball"
@@ -36,6 +37,7 @@ const App = () => {
       <Route path="WalkshoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" /*shoeSize={[40,41,42,44]}*//>}></Route>
       <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" /*shoeSize={[38,39,40,41]}*//>}></Route>
       <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" /*shoeSize={[40,41,42,44]}*//>}></Route>
+      <Route path="Brands" element={<Brands/>}></Route>
 
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce productHeader="Miesten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce productHeader="Naisten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
