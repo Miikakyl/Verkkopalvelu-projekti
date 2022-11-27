@@ -22,7 +22,7 @@ function WalkShoes(props) {
                 <div className="row">
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="demotuote1">
+                        <Link to="nikeairforce">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirForce_1/Nike_AirForce_1_1.png')} alt=""/>
                         <h4>Nike Airforce</h4>
                         <p>100,00€</p>
@@ -31,7 +31,7 @@ function WalkShoes(props) {
                         </div>
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="demotuote2">
+                        <Link to="nikeairforce720">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_720/Nike_AirMax_720_1.png')} alt=""/>
                         <h4>Nike Airforce 720</h4>
                         <p>120,00€</p>
@@ -41,7 +41,7 @@ function WalkShoes(props) {
                         </div>
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="adidasy3">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Adidas_Y3/Adidas_Y3_1.png')} alt=""/>
                         <h4>Adidas Y3</h4>
                         <p>200,00€</p>
@@ -53,7 +53,7 @@ function WalkShoes(props) {
                 <div className="row">
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="nikeairforce97">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Nike_AirMax_97/Nike_AirMax_97_1.png')} alt=""/>
                         <h4>Nike Airforce 97</h4>
                         <p>90,00€</p>
@@ -62,7 +62,7 @@ function WalkShoes(props) {
                         </div>
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="yeezy">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Yeezy/Yeezy_1.png')} alt=""/>
                         <h4>Yeezy</h4>
                         <p>200,00€</p>
@@ -71,7 +71,7 @@ function WalkShoes(props) {
                         </div>
 
                         <div className="col-xs-12 col-md-4 col-xl-4">
-                        <Link to="#">
+                        <Link to="adidasgazelle">
                         <img src={require('../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Adidas_Gazelle/Adidas_Gazelle_1.png')} alt=""/>
                         <h4>Adidas Gazelle</h4>
                         <p>80,00€</p>
