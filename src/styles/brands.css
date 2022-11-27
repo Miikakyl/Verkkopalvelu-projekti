@@ -35,3 +35,10 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
+
+
+@media only screen and (max-width: 375px) {
+    #brandHeader {
+        padding: 50px;
+    }
+}
