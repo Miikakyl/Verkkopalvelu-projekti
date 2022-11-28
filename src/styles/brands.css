@@ -1,0 +1,44 @@
+
+.brandHeaderRow {
+    background-color: #102E62;
+    border-bottom: 2px solid #F8A700;
+    border-top: 2px solid #F8A700;
+}
+
+.brandContainer {
+    background-color: #102E62;
+    height: 100%;
+    border-bottom: 2px solid #F8A700;
+}
+
+.logos {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 150px;
+}
+
+#brandHeader {
+    color: white;
+    width: fit-content;
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.brandRow1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.brandRow3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+@media only screen and (max-width: 375px) {
+    #brandHeader {
+        padding: 50px;
+    }
+}

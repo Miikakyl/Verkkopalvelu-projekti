@@ -19,7 +19,7 @@ const Nav = () => {
             </li>
 
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownMen" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" id="navbarDropdownMen" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Miehet
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMen">
@@ -30,7 +30,7 @@ const Nav = () => {
             </li>
 
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownWomen" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" id="navbarDropdownWomen" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Naiset
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownWomen">
@@ -40,17 +40,8 @@ const Nav = () => {
               </div>
             </li>
 
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdownBrands" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Brandit
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownBrands">
-                <Link to="#" className="dropdown-item">Adidas</Link>
-                <Link to="#" className="dropdown-item">Converse</Link>
-                <Link to="#" className="dropdown-item">Nike</Link>
-                <Link to="#" className="dropdown-item">Reebok</Link>
-                <Link to="#" className="dropdown-item">Vans</Link>
-              </div>
+            <li className='nav-item'>
+              <Link className='nav-link' to="/Brands">Brandit</Link>
             </li>
             <li className="nav-item">
               <Link className='nav-link' to="#">Tietoa meistä</Link>
