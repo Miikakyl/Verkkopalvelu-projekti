@@ -22,6 +22,13 @@ import VansAuthentic from "./components/productpage-skate/vansauthentic"
 import NikeBlazer from "./components/productpage-skate/nikeblazer"
 import Reebook from "./components/productpage-skate/reebok"
 
+import BasketballM from "./Kuvat/Sivustokuvat/Basketball.jpg"
+import BasketballW from "./Kuvat/Sivustokuvat/basketballWomen.jpg"
+import WalkingM from "./Kuvat/Sivustokuvat/photo.jpg"
+import WalkingW from "./Kuvat/Sivustokuvat/walkingWomen.jpg"
+import SkateboardM from "./Kuvat/Sivustokuvat/Skatebackground.jpg"
+import SkateboardW from "./Kuvat/Sivustokuvat/skateboardingWomen.jpg"
+
 const App = () => {
 
   return (
@@ -30,12 +37,12 @@ const App = () => {
     <Routes>
       <Route path="/" element={<FrontPage/>}></Route>
       {/* <Route path="mens" element={<Mens/>}></Route> */}
-      <Route path="SkateboardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="SkateboardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" /*shoeSize={[40,41,42,44]}*//>}></Route>
-      <Route path="WalkshoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="WalkshoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" /*shoeSize={[40,41,42,44]}*//>}></Route>
-      <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" /*shoeSize={[40,41,42,44]}*//>}></Route>
+      <Route path="SkateboardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" picture={[SkateboardW]}/*shoeSize={[38,39,40,41]}*//>}></Route>
+      <Route path="SkateboardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" picture={[SkateboardM]}/*shoeSize={[40,41,42,44]}*//>}></Route>
+      <Route path="WalkshoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" picture={[WalkingW]}/*shoeSize={[38,39,40,41]}*//>}></Route>
+      <Route path="WalkshoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" picture={[WalkingM]}/*shoeSize={[40,41,42,44]}*//>}></Route>
+      <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" picture={[BasketballW]}/*shoeSize={[38,39,40,41]}*//>}></Route>
+      <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" picture={[BasketballM]} /*shoeSize={[40,41,42,44]}*//>}></Route>
 
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce productHeader="Miesten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce productHeader="Naisten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>

@@ -6,7 +6,7 @@ function SkateBoard(props) {
         <div id="SkateBoard">
 
             <div className="col-12 ">
-            <img src={require('../Kuvat/Sivustokuvat/Skatebackground.jpg')} alt=""/>
+            <img src={props.picture} alt=""/>
             </div>
 
             <div className="col-12">

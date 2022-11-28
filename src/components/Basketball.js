@@ -2,10 +2,11 @@ import '../styles/Basketball.css'
 import { Link } from 'react-router-dom'
 
 const Basketball = (props) => {
+
     return (
         <div id="Basketball">
             <div className="col-12 ">
-                <img src={require('../Kuvat/Sivustokuvat/Basketball.jpg')} alt="" />
+                <img src={props.picture} alt="" />
             </div>
 
             <div className="col-12">
