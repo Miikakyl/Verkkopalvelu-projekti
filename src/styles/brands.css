@@ -1,6 +1,6 @@
 
 .brandHeaderRow {
-    background-color: #102E62;
+    background-color: #F8A700;
     border-bottom: 2px solid #F8A700;
     border-top: 2px solid #F8A700;
 }
@@ -8,7 +8,6 @@
 .brandContainer {
     background-color: #102E62;
     height: 100%;
-    border-bottom: 2px solid #F8A700;
 }
 
 .logos {
@@ -19,7 +18,7 @@
 }
 
 #brandHeader {
-    color: white;
+    color: #102E62;
     width: fit-content;
     margin: 0;
     padding: 10px;
