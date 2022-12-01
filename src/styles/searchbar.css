@@ -1,4 +1,4 @@
-#searchBtn {
+.searchBtns {
     border: none;
     background-color: transparent;
     position: absolute;
@@ -9,12 +9,6 @@
 .searchInput {
     background-color: #314c77;
     border: none;
-}
-
-#searchIcon {
-    color: white;
-    width: 20px;
-    height: 30px;
 }
 
 .searchResult {
