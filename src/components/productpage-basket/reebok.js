@@ -6,7 +6,7 @@ const reebok = (props) => {
         <div id="product">
 
             <div className="col-12 ">
-            <img src= {require('../../Kuvat/Sivustokuvat/Basketball.jpg')} alt=""/>
+            <img src= {props.basket} alt=""/>
             </div>
 
             <div className="col-12">

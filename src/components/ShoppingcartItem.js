@@ -1,4 +1,4 @@
-import '../styles/shoppingcartItem.css'
+import '../styles/ShoppingCartItem.css'
 
 const ShoppingcartItem = (props) => {
     return (

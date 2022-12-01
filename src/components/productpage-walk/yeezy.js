@@ -6,7 +6,7 @@ const yeezy = (props) => {
         <div id="product">
 
             <div className="col-12 ">
-            <img src= {require('../../Kuvat/Sivustokuvat/photo.jpg')} alt=""/>
+            <img src= {props.walk} alt=""/>
             </div>
 
             <div className="col-12">

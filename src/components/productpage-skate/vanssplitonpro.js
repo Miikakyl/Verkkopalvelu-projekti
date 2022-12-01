@@ -6,7 +6,7 @@ const vanssplitonpro = (props) => {
         <div id="product">
 
             <div className="col-12 ">
-            <img src= {require('../../Kuvat/Sivustokuvat/Skatebackground.jpg')} alt=""/>
+            <img src= {props.skate} alt=""/>
             </div>
 
             <div className="col-12">
