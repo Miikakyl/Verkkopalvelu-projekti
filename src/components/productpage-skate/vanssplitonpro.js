@@ -21,15 +21,41 @@ const vanssplitonpro = (props) => {
             <div className="container product">
                 <div className="row">
 
-                        <div className="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+                        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
+                        <div className="carousel-inner">
+                        <div className="d-sm-none carousel-item active col-xs-12">
+                        <img className="d-block w-100" src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_1.png')} alt=""/>              
+                        </div>
+
+                        <div className="d-sm-none carousel-item col-xs-12">
+                        <img className="d-block w-100" src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_2.png')} alt=""/>
+                        </div>
+
+                        <div className="d-sm-none carousel-item col-xs-12">
+                        <img className="d-block w-100" src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_3.png')} alt=""/>
+                        </div>
+
+                        
+                        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span className="bi bi-caret-left-square-fill" aria-hidden="true"></span>
+                        <span className="sr-only"></span>
+                        </a>
+                        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span className="bi bi-caret-right-square-fill"aria-hidden="true"></span>
+                        <span className="sr-only"></span>
+                        </a>
+                        </div>
+                        </div>
+
+                        <div className="d-none d-sm-block col-sm-4 col-md-4 col-xl-4">
                         <img src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_1.png')} alt=""/>              
                         </div>
 
-                        <div className="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+                        <div className="d-none d-sm-block col-sm-4 col-md-4 col-xl-4">
                         <img src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_2.png')} alt=""/>
                         </div>
 
-                        <div className="col-xs-12 col-sm-4 col-md-4 col-xl-4">
+                        <div className="d-none d-sm-block col-sm-4 col-md-4 col-xl-4">
                         <img src={require('../../Kuvat/Tuotekuvat/Paivitetyt_Tuotekuvat/Vans_SlipOn_Pro/Vans_SlipOn_Pro_3.png')} alt=""/>
                         </div>
                         
