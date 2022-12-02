@@ -2,14 +2,21 @@ import '../styles/brands.css'
 
 const Brands = () => {
     return (
-        <div className="container-fluid brands-container p-0">
-            <div className="row mx-0 d-none d-lg-block">
-                <div className="cover p-0 col-lg-12">
+        <div id ="brand">
+
+                <div className="col-12">
+                    <img src={require('../Kuvat/Sivustokuvat/brand.jpg')} alt="" />
                 </div>
+
+            <div className="col-12">
+                <p>30 päivän palautusoikeus</p>
+                <p>Ilmainen toimitus ja palautus</p>
             </div>
-            <div className="row mx-0 brandHeaderRow d-flex justify-content-center">
-                <h1 id="brandHeader">Brandit</h1>
+
+            <div className="col-12">
+                <h1>Brandisivu</h1>
             </div>
+
             <div className="container-fluid brandContainer">
                 <div className="mx-5 row brandRow1 wrap">
                     <div className="col-lg-4 col-md-4 d-flex justify-content-center"><img className='logos' src={require('../Kuvat/Logot/Adidas_logo_white.png')}></img></div>
