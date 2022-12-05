@@ -45,7 +45,7 @@ const Nav = () => {
               <Link className='nav-link' to="/Brands">Brandit</Link>
             </li>
             <li className="nav-item">
-              <Link className='nav-link' to="#">Tietoa meistä</Link>
+              <Link className='nav-link' to="/Information">Tietoa meistä</Link>
             </li>
           </ul>
         </div>

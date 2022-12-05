@@ -1,0 +1,36 @@
+html,body {
+  overflow-x: hidden; 
+  padding-bottom: 20px;
+}
+
+.addTextLeft, .addTextRight {
+  margin: 0;
+  padding: 0.5em;
+  background-color:  #F8A700;
+  text-align: center;
+}
+
+#Information > div:nth-child(1) img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+#Information > div:nth-child(3) {
+  padding: 15px;
+  margin-bottom: 6.6em;
+  background-color:  #102E62;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#Information  > div:nth-child(5) {
+  background-color: white;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 6.6em;
+}
+
+
+
