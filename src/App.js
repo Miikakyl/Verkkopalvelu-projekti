@@ -43,6 +43,11 @@ import WalkingW from "./Kuvat/Sivustokuvat/walkingWomen.jpg"
 import SkateboardM from "./Kuvat/Sivustokuvat/Skatebackground.jpg"
 import SkateboardW from "./Kuvat/Sivustokuvat/skateboardingWomen.jpg"
 
+
+import bannerImage from "./Kuvat/Sivustokuvat/InformationBanner.jpg"
+import carouselImage1 from "./Kuvat/Sivustokuvat/carouselPicture1.png"
+import carouselImage2 from "./Kuvat/Sivustokuvat/carouselPicture2.jpg"
+
 const App = () => {
 
   return (
@@ -58,7 +63,7 @@ const App = () => {
       <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" picture={[BasketballW]} /*shoeSize={[38,39,40,41]}*//>}></Route>
       <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" picture={[BasketballM]}/*shoeSize={[40,41,42,44]}*//>}></Route>
       <Route path="Brands" element={<Brands/>}></Route>
-      <Route path="Information" element={<Information/>}></Route>
+      <Route path="Information" element={<Information banner = {[bannerImage]} bannerHeader="Tietoa meistä" carousel1 = {[carouselImage1]} carousel2 = {[carouselImage2]}/>}></Route>
 
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
