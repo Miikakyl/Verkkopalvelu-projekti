@@ -10,27 +10,27 @@ import Basketball from "./components/Basketball"
 import WalkShoesM from "./Kuvat/Sivustokuvat/photo.jpg"
 import WalkShoesW from "./Kuvat/Sivustokuvat/walkingWomen.jpg"
 
-import NikeAirforce from "./components/productpage-walk/nikeairforce"
-import NikeAirforce720 from "./components/productpage-walk/nikeairforce720"
-import AdidasY3 from "./components/productpage-walk/adidasy3"
-import NikeAirforce97 from "./components/productpage-walk/nikeairforce97"
-import Yeezy from "./components/productpage-walk/yeezy"
-import Adidasgazelle from "./components/productpage-walk/adidasgazelle"
+import NikeAirforce from "./components/productpage-walk/Nikeairforce"
+import NikeAirforce720 from "./components/productpage-walk/Nikeairforce720"
+import AdidasY3 from "./components/productpage-walk/Adidasy3"
+import NikeAirforce97 from "./components/productpage-walk/Nikeairforce97"
+import Yeezy from "./components/productpage-walk/Yeezy"
+import Adidasgazelle from "./components/productpage-walk/Adidasgazelle"
 
 import BasketBallM from "./Kuvat/Sivustokuvat/Basketball.jpg"
 import BasketBallW from "./Kuvat/Sivustokuvat/basketballWomen.jpg"
 
-import Jordan1low from "./components/productpage-basket/jordan1low"
-import Jordan1mid from "./components/productpage-basket/jordan1mid"
-import NikeKD from "./components/productpage-basket/nikekd"
-import Converse from "./components/productpage-basket/converse"
-import Reebok from "./components/productpage-basket/reebok"
+import Jordan1low from "./components/productpage-basket/Jordan1low"
+import Jordan1mid from "./components/productpage-basket/Jordan1mid"
+import NikeKD from "./components/productpage-basket/Nikekd"
+import Converse from "./components/productpage-basket/Converse"
+import Reebok from "./components/productpage-basket/Reebok"
 
-import Vansspliton from "./components/productpage-skate/vansspliton"
-import Vanssplitonpro from "./components/productpage-skate/vanssplitonpro"
-import VansAuthentic from "./components/productpage-skate/vansauthentic"
-import NikeBlazer from "./components/productpage-skate/nikeblazer"
-import Reebook from "./components/productpage-skate/reebok"
+import Vansspliton from "./components/productpage-skate/Vansspliton"
+import Vanssplitonpro from "./components/productpage-skate/Vanssplitonpro"
+import VansAuthentic from "./components/productpage-skate/Vansauthentic"
+import NikeBlazer from "./components/productpage-skate/Nikeblazer"
+import Reebook from "./components/productpage-skate/Reebok"
 
 import SkateBoardM from "./Kuvat/Sivustokuvat/Skatebackground.jpg"
 import SkateBoardW from "./Kuvat/Sivustokuvat/skateboardingWomen.jpg"
@@ -50,16 +50,16 @@ const App = () => {
     <Routes>
       <Route path="/" element={<FrontPage/>}></Route>
       {/* <Route path="mens" element={<Mens/>}></Route> */}
-      <Route path="SkateboardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" picture={[SkateboardW]} /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="SkateboardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" picture={[SkateboardM]} /*shoeSize={[40,41,42,44]}*//>}></Route>
-      <Route path="WalkshoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" picture={[WalkingW]} /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="WalkshoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" picture={[WalkingM]}/*shoeSize={[40,41,42,44]}*//>}></Route>
-      <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" picture={[BasketballW]} /*shoeSize={[38,39,40,41]}*//>}></Route>
-      <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" picture={[BasketballM]}/*shoeSize={[40,41,42,44]}*//>}></Route>
+      <Route path="SkateboardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" picture={[SkateboardW]}/>}></Route>
+      <Route path="SkateboardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" picture={[SkateboardM]}/>}></Route>
+      <Route path="WalkshoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" picture={[WalkingW]}/>}></Route>
+      <Route path="WalkshoesMen" element={<WalkShoes categoryHeader="Miesten kävelykengät" picture={[WalkingM]}/>}></Route>
+      <Route path="BasketballWomen" element={<Basketball categoryHeader="Naisten koripallokengät" picture={[BasketballW]}/>}></Route>
+      <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" picture={[BasketballM]}/>}></Route>
       <Route path="Brands" element={<Brands/>}></Route>
 
-      <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
-      <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
+      <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name=" Nike Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
+      <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Nike Airforce 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
       <Route path="WalkshoesMen/nikeairforce720" element={<NikeAirforce720 walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Nike Airforce 720 120€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce720" element={<NikeAirforce720 walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Nike Airforce 720 120€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta", "Violetti"]} shoeSize={[38,39,40,41]}/>}></Route>
       <Route path="WalkshoesMen/adidasy3" element={<AdidasY3 walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Adidas Y3 100€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
@@ -92,7 +92,6 @@ const App = () => {
       <Route path="SkateboardWomen/nikeblazer" element={<NikeBlazer skate={[SkateBoardW]} productHeader="Naisten skeittikengät" name="Nike Blazer 60€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Harmaa"]} shoeSize={[38,39,40,41]}/>}></Route>
       <Route path="SkateboardMen/reebok" element={<Reebook skate={[SkateBoardM]} productHeader="Miesten skeittikengät" name="Reebok 90€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="SkateboardWomen/reebok" element={<Reebook skate={[SkateBoardW]} productHeader="Naisten skeittikengät" name="Reebok 90€" information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
-
     </Routes>
     <Footer/>
    </>
