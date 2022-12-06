@@ -1,7 +1,25 @@
 import '../../styles/product.css'
+import react, {useEffect, useState} from 'react'
+import uuid from 'react-uuid';
 
+const Nikeairforce = (props) => {
+    const [shoeColor, setShoeColor] = useState("")
+    const [shoeSize, setShoeSize] = useState("")
+    
+    const addToCart = (e) => {
+        e.preventDefault()
 
-const nikeairforce = (props) => {
+        const productData = {
+            "name": props.name,
+            "color": shoeColor? shoeColor : "musta",
+            "size": shoeSize? shoeSize: 40,
+            "price": props.price,
+            "uuid": uuid()
+
+        }
+        props.callback(productData)
+    }
+
     return (
         <div id="product">
 
@@ -66,15 +84,15 @@ const nikeairforce = (props) => {
 
                         <div className="col-xs-12 col-sm-6 col-md-6 col-xl-6 d-flex colorbox">
 
-                        <form>
-                        <h1>{props.name}</h1>
+                        <form onSubmit={addToCart}>
+                        <h1>{props.name} {props.price}€</h1>
                         <h4>Valitse väri</h4>
                         <select>
-                            {props.color.map((color) => <option>{color}</option>)}
+                            {props.color.map((color) => <option value={color} onClick={(e) => {setShoeColor([...shoeColor,e.target.value])}}>{color}</option>)}
                         </select>
                         <h4>Valitse kokoluokka</h4>
                         <select>
-                            {props.shoeSize.map((size) => <option>{size}</option>)}
+                            {props.shoeSize.map((size) => <option value={size} onClick={(e) => {setShoeSize([...shoeSize,e.target.value])}}>{size}</option>)}
                         </select>
                         <button type="submit">Lisää koriin</button>
                         </form>
@@ -100,12 +118,10 @@ const nikeairforce = (props) => {
                             <li>Tarjoamme 30 päivän palautusoikeuden</li>
                             </ul>
                         </div>
-    
-
                 </div>
             </div>
         </div>
     )
 }
 
-export default nikeairforce
+export default Nikeairforce

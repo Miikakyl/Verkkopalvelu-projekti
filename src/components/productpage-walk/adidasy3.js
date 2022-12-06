@@ -1,7 +1,23 @@
 import '../../styles/product.css'
+import react, {useEffect, useState} from 'react'
+import uuid from 'react-uuid'
 
+const Adidasy3 = (props) => {
+    const [shoeColor, setShoeColor] = useState("")
+    const [shoeSize, setShoeSize] = useState("")
+    const addToCart = (e) => {
+        e.preventDefault()
 
-const adidasy3 = (props) => {
+        const productData = {
+            "name": props.name,
+            "color": shoeColor? shoeColor : "musta",
+            "size": shoeSize? shoeSize: 40,
+            "price": props.price,
+            "uuid": uuid()
+
+        }
+        props.callback(productData)
+    }
     return (
         <div id="product">
 
@@ -64,8 +80,8 @@ const adidasy3 = (props) => {
 
                         <div className="col-xs-12 col-sm-6 col-md-6 col-xl-6 d-flex colorbox">
 
-                        <form>
-                        <h1>{props.name}</h1>
+                        <form onSubmit={addToCart}>
+                        <h1>{props.name} {props.price}€</h1>
                         <h4>Valitse väri</h4>
                         <select>
                             {props.color.map((color) => <option>{color}</option>)}
@@ -106,4 +122,4 @@ const adidasy3 = (props) => {
     )
 }
 
-export default adidasy3
+export default Adidasy3
