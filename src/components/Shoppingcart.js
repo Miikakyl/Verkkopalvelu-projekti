@@ -63,7 +63,7 @@ const Shoppingcart = (props) => {
               <p className="checkoutTexts mx-4">Tilauksen arvio:</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset:</p>
               <p className="checkoutTexts mx-4">Yhteensä:</p>
-              <button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button>
+               <Link to="/ShoppingcartSite"><button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button></Link>
               <button className="shoppingcartBtns p-1 mx-4 mb-4">Tyhjennä</button>
             </div>
           </>
