@@ -3,16 +3,16 @@ import react, {useEffect, useState} from 'react'
 import uuid from 'react-uuid';
 
 const Nikeairforce = (props) => {
-    const [shoeColor, setShoeColor] = useState("")
-    const [shoeSize, setShoeSize] = useState("")
+    const [shoeColor, setShoeColor] = useState(props.color[0])
+    const [shoeSize, setShoeSize] = useState(props.shoeSize[0])
     
     const addToCart = (e) => {
         e.preventDefault()
 
         const productData = {
             "name": props.name,
-            "color": shoeColor? shoeColor : "musta",
-            "size": shoeSize? shoeSize: 40,
+            "color": shoeColor,
+            "size": shoeSize,
             "price": props.price,
             "uuid": uuid()
 
@@ -88,11 +88,11 @@ const Nikeairforce = (props) => {
                         <h1>{props.name} {props.price}€</h1>
                         <h4>Valitse väri</h4>
                         <select>
-                            {props.color.map((color) => <option value={color} onClick={(e) => {setShoeColor([...shoeColor,e.target.value])}}>{color}</option>)}
+                            {props.color.map((color) => <option value={color} onClick={(e) => {setShoeColor(e.target.value)}}>{color}</option>)}
                         </select>
                         <h4>Valitse kokoluokka</h4>
                         <select>
-                            {props.shoeSize.map((size) => <option value={size} onClick={(e) => {setShoeSize([...shoeSize,e.target.value])}}>{size}</option>)}
+                            {props.shoeSize.map((size) => <option value={size} onClick={(e) => {setShoeSize(e.target.value)}}>{size}</option>)}
                         </select>
                         <button type="submit">Lisää koriin</button>
                         </form>
