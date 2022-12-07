@@ -7,6 +7,7 @@ const Shoppingcart = (props) => {
 
   const [isActive, setIsActive] = useState(false)
   const [shoppingCartItems, setShoppingCartItems] = useState([])
+  const [totalPrice,setTotalPrice] = useState()
 
   const handleClick = () => {
 
@@ -17,11 +18,13 @@ const Shoppingcart = (props) => {
     const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.uuid !== uuid)
     setShoppingCartItems(shoppingcartWithoutRemoved)
     localStorage.setItem('shoppingcart',JSON.stringify(shoppingcartWithoutRemoved))
+    setTotalPrice(totalPrice - shoppingCartItems.filter(item => item.uuid === uuid)[0].price)
   }
 
   useEffect(() => {
     if (props.shoppingcartItem) {
       setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
+      setTotalPrice(totalPrice + props.shoppingcartItem.price)
     }
   }, [props.shoppingcartItem])
 
@@ -34,6 +37,12 @@ const Shoppingcart = (props) => {
   useEffect(() => {
     if ('shoppingcart' in localStorage) {
       setShoppingCartItems(JSON.parse(localStorage.getItem('shoppingcart')))
+      let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
+      let oldTotal = 0;
+      oldCart.forEach((item) => 
+        oldTotal = oldTotal + item.price
+      );
+      setTotalPrice(oldTotal)
     }
   }, [])
 
@@ -60,9 +69,9 @@ const Shoppingcart = (props) => {
               )}
             </div>
             <div className="checkoutBtnArea d-flex flex-column">
-              <p className="checkoutTexts mx-4">Tilauksen arvio:</p>
-              <p className="checkoutTexts mx-4">Toimituksen kustannukset:</p>
-              <p className="checkoutTexts mx-4">Yhteensä:</p>
+              <p className="checkoutTexts mx-4">Tilauksen arvio: {Number(totalPrice)}€</p>
+              <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
+              <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
               <button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button>
               <button className="shoppingcartBtns p-1 mx-4 mb-4">Tyhjennä</button>
             </div>
