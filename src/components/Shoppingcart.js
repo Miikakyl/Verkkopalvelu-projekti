@@ -25,23 +25,19 @@ const Shoppingcart = (props) => {
     if (props.shoppingcartItem) {
       setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
       setTotalPrice(totalPrice + props.shoppingcartItem.price)
+      localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
     }
   }, [props.shoppingcartItem])
 
   useEffect(() => {
-    if(shoppingCartItems.length !== 0){
-      localStorage.setItem('shoppingcart',JSON.stringify(shoppingCartItems))
-    }
-  },[shoppingCartItems])
-
-  useEffect(() => {
     if ('shoppingcart' in localStorage) {
-      setShoppingCartItems(JSON.parse(localStorage.getItem('shoppingcart')))
       let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
+
+      setShoppingCartItems(oldCart)
       let oldTotal = 0;
       oldCart.forEach((item) => 
         oldTotal = oldTotal + item.price
-      );
+      )
       setTotalPrice(oldTotal)
     }
   }, [])
