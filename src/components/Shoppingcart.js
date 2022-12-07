@@ -65,10 +65,10 @@ const Shoppingcart = (props) => {
               )}
             </div>
             <div className="checkoutBtnArea d-flex flex-column">
-              <p className="checkoutTexts mx-4">Tilauksen arvio: {Number(totalPrice)}€</p>
+            <p className="checkoutTexts mx-4">Tilauksen arvio: {totalPrice}€</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
               <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
-              <button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button>
+               <Link to="/ShoppingcartSite"><button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button></Link>
               <button className="shoppingcartBtns p-1 mx-4 mb-4">Tyhjennä</button>
             </div>
           </>
