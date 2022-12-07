@@ -1,4 +1,4 @@
-html,body {
+/* html,body {
   overflow-x: hidden; 
   padding-bottom: 20px;
 }
@@ -8,9 +8,9 @@ html,body {
   padding: 0.5em;
   background-color:  #F8A700;
   text-align: center;
-}
+} */
 
-#Information > div:nth-child(1) img {
+/* #Information > div:nth-child(1) img {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -18,7 +18,7 @@ html,body {
 
 #Information > div:nth-child(3) {
   padding: 15px;
-  margin-bottom: 6.6em;
+  margin-bottom: 1%;
   background-color:  #102E62;
   color: white;
   display: flex;
@@ -27,10 +27,99 @@ html,body {
 
 #Information  > div:nth-child(5) {
   background-color: white;
-  padding-right: 1em;
-  padding-left: 1em;
-  padding-bottom: 6.6em;
+
+  padding-bottom: 1%;
+} */
+
+#Information > div:nth-child(1) img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
 }
 
+#Information > div:nth-child(2) {
+  height: 40px;
+  background-color:  #F8A700;
+}
+
+#Information > div:nth-child(2) p:first-child {
+  float: left;
+  padding-left: 200px;
+  padding-top: 6px;
+}
+
+#Information > div:nth-child(2) p:last-child {
+  float: right;
+  padding-right: 200px;
+  padding-top: 6px;
+}
+
+#Information a {
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (max-width: 768px), (max-width: 800px) {
+  #Information > div:nth-child(2) p:first-child {
+      padding-left: 100px;
+  }
+  
+  #Information > div:nth-child(2) p:last-child {
+      padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 425px), (max-width: 480px), (max-width: 482px), (max-width: 582px)  {
+  #Information > div:nth-child(2) p:first-child {
+      padding-left: 30px;
+      font-size: 14px;
+      padding-top: 8px;
+  }
+  
+  #Information > div:nth-child(2) p:last-child {
+      padding-right: 30px;
+      font-size: 14px;
+      padding-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 375px), (max-width: 390px), (max-width: 392px) {
+  #Information > div:nth-child(2) p:first-child {
+      padding-left: 30px;
+      font-size: 12px;
+      padding-top: 10px;
+  }
+  
+  #Information > div:nth-child(2) p:last-child {
+      padding-right: 30px;
+      font-size: 12px;
+      padding-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #Information > div:nth-child(2) p:first-child {
+      display: none;
+  }
+  
+  #Information > div:nth-child(2) p:last-child {
+      display: none;
+  }
+}
+
+#Information > div:nth-child(3) {
+  height: 80px;
+  background-color: #102E62;
+  color: white;
+}
+
+#Information > div:nth-child(3) h1:first-child {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.information {
+  padding: 12px;
+}
 
 
