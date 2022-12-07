@@ -47,11 +47,31 @@
     text-align: center;
     text-decoration: none;
 }
-
 .shoppingcartBtns:hover {
     text-decoration: none;
 }
+#shoppincartBtn {
+    
+    border: none;
+    background-color: transparent;
+}
+.itemCounter {
+    border: 1px solid #102e62;
+    color: #102e62;
+    background-color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top:8px;
+    margin-right:5px;
+}
+.itemCounter > p {
+    font-size: 15px;
 
+}
 .checkoutTexts {
     margin: 0;
     color: #dbdbdb;
