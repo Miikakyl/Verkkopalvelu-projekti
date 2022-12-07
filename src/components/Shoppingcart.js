@@ -1,6 +1,7 @@
 import ShoppingcartItem from './ShoppingcartItem';
 import React, { useState } from 'react';
 import '../styles/shoppingcart.css'
+import { Link } from 'react-router-dom';
 
 const Shoppingcart = () => {
 
@@ -30,7 +31,7 @@ const Shoppingcart = () => {
           <p className="checkoutTexts mx-4">Tilauksen arvio:</p>
           <p className="checkoutTexts mx-4">Toimituksen kustannukset:</p>
           <p className="checkoutTexts mx-4">Yhteensä:</p>
-          <button className="shoppingcartBtns p-1 mx-4">Jatka kassalle</button>
+          <Link to="/Shoppingcart" id="shoppingcartBtns"className="shoppingcartBtns p-1 mx-4">Jatka kassalle</Link>
           <button className="shoppingcartBtns p-1 mx-4 my-2">Tyhjennä</button>
         </div>
       </div>
