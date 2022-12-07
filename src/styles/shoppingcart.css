@@ -44,6 +44,12 @@
     background-color: #f8A700;
     color: #102E62;
     border: 1px solid #102E62;
+    text-align: center;
+    text-decoration: none;
+}
+
+.shoppingcartBtns:hover {
+    text-decoration: none;
 }
 
 .checkoutTexts {

@@ -1,6 +1,7 @@
 import ShoppingcartItem from './ShoppingcartItem';
 import React, { useState, useEffect } from 'react';
 import '../styles/shoppingcart.css'
+import { Link } from 'react-router-dom';
 
 const Shoppingcart = (props) => {
 
