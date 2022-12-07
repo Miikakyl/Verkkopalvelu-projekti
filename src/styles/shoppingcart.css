@@ -51,7 +51,8 @@
     text-decoration: none;
 }
 #shoppincartBtn {
-    
+    position: relative;
+    height: 35px;
     border: none;
     background-color: transparent;
 }
@@ -65,8 +66,6 @@
     position: absolute;
     right: 0;
     top: 0;
-    margin-top:8px;
-    margin-right:5px;
 }
 .itemCounter > p {
     font-size: 15px;
