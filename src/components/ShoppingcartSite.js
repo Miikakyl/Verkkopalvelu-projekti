@@ -1,11 +1,14 @@
 import "../styles/ShoppingcartSite.css"
 import { Link } from "react-router-dom";
+import React,{ useEffect } from "react";
 
-const ShoppingcartSite = () => {
+const ShoppingcartSite = (props) => {
+
+    useEffect(() => {
+        props.navbarHidingState(true)
+    }, [])
+    
     return (
-
-        
-
         <div id="Shoppingcart">
 
             <div class="container">

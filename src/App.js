@@ -52,13 +52,17 @@ import carouselImage2 from './Kuvat/Sivustokuvat/carouselPicture2.jpg'
 
 const App = () => {
   const [cartItem, setCartItem] = useState(null)
+  const [navbarHidden,setNavbarHidden] = useState(false)
   
   const sendShoppingItem = (productData) => {
     setCartItem(productData)
   }
   return (
    <>
-    <Nav shoppingcartItem={cartItem}/>
+    {navbarHidden
+      ? null
+      : <Nav shoppingcartItem={cartItem}/>
+    }
     <Routes>
       <Route path="/" element={<FrontPage/>}></Route>
       {/* <Route path="mens" element={<Mens/>}></Route> */}
@@ -70,7 +74,7 @@ const App = () => {
       <Route path="BasketballMen" element={<Basketball categoryHeader="Miesten koripallokengät" picture={[BasketballM]}/>}></Route>
       <Route path="Brands" element={<Brands/>}></Route>
       <Route path="Information" element={<Information banner = {[bannerImage]} bannerHeader="Tietoa meistä" carousel1 = {[carouselImage1]} carousel2 = {[carouselImage2]}/>}></Route>
-      <Route path="ShoppingcartSite" element={<ShoppingcartSite/>}></Route>
+      <Route path="ShoppingcartSite" element={<ShoppingcartSite navbarHidingState={setNavbarHidden}/>}></Route>
 
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Nike Airforce 1" price={100} information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Nike Airforce 1" price={100}  information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
