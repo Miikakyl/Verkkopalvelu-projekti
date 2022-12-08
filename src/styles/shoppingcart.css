@@ -8,12 +8,12 @@
     display: none;
     top: 46px;
     right: 0px;
+    z-index: 1;
 }
 
 .shoppingcartHeader {
     color: #dbdbdb;
 }
-
 .emptyText {
     color: #dbdbdb;
 }

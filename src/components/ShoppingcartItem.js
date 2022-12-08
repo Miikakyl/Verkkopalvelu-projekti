@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/ShoppingCartItem.css'
+import '../styles/shoppingcartItem.css'
 import LoadingIcon from './LoadingIcon'
 import axios from 'axios'
 

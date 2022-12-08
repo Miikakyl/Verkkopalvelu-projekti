@@ -8,6 +8,7 @@ const Shoppingcart = (props) => {
   const [isActive, setIsActive] = useState(false)
   const [shoppingCartItems, setShoppingCartItems] = useState([])
   const [totalPrice,setTotalPrice] = useState()
+  
 
   const handleClick = () => {
 
@@ -27,9 +28,6 @@ const Shoppingcart = (props) => {
       setTotalPrice(totalPrice + props.shoppingcartItem.price)
       localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
     }
-  }, [props.shoppingcartItem])
-
-  useEffect(() => {
     if ('shoppingcart' in localStorage) {
       let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
 
@@ -40,7 +38,8 @@ const Shoppingcart = (props) => {
       )
       setTotalPrice(oldTotal)
     }
-  }, [])
+  }, [props.shoppingcartItem])
+
 
   return (
     <div className="shoppingcartContainer">
@@ -68,8 +67,8 @@ const Shoppingcart = (props) => {
             <p className="checkoutTexts mx-4">Tilauksen arvio: {totalPrice}€</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
               <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
-               <Link to="/ShoppingcartSite"><button className="shoppingcartBtns p-1 mx-4 my-2">Jatka kassalle</button></Link>
-              <button className="shoppingcartBtns p-1 mx-4 mb-4">Tyhjennä</button>
+               <Link to="/ShoppingcartSite"><button className="shoppingcartBtns p-1 my-2">Jatka kassalle</button></Link>
+              <button className="shoppingcartBtns p-1 mb-4">Tyhjennä</button>
             </div>
           </>
         }
