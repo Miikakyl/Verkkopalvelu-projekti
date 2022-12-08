@@ -1,5 +1,5 @@
 import { Routes, Route} from "react-router-dom"
-import react, {useState} from 'react'
+import react, {useState,useEffect} from 'react'
 import Nav from './components/Nav'
 import FrontPage from './components/FrontPage'
 import Footer from './components/Footer'

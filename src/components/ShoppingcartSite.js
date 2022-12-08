@@ -4,9 +4,14 @@ import React,{ useEffect } from "react";
 
 const ShoppingcartSite = (props) => {
 
-    useEffect(() => {
-        props.navbarHidingState(true)
-    }, [])
+   useEffect(() => {
+    props.navbarHidingState(true)
+   
+     return () => {
+        props.navbarHidingState(false)
+     }
+   }, [])
+   
     
     return (
         <div id="Shoppingcart">
