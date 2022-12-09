@@ -43,7 +43,7 @@ const Shoppingcart = (props) => {
 
   return (
     <div className="shoppingcartContainer">
-      <button id="shoppincartBtn" onClick={handleClick}>¨
+      <button id="shoppincartBtn" onClick={handleClick}>
         {shoppingCartItems.length > 0 &&
           <div className="itemCounter">
             <p>{shoppingCartItems.length}</p>

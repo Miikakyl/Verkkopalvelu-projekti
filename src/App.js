@@ -9,6 +9,7 @@ import SkateBoard from "./components/SkateBoard"
 import Basketball from "./components/Basketball"
 import Information from "./components/Information"
 import ShoppingcartSite from "./components/ShoppingcartSite"
+import Register from './components/Register'
 
 import WalkShoesM from "./Kuvat/Sivustokuvat/photo.jpg"
 import WalkShoesW from "./Kuvat/Sivustokuvat/walkingWomen.jpg"
@@ -53,6 +54,7 @@ import carouselImage2 from './Kuvat/Sivustokuvat/carouselPicture2.jpg'
 const App = () => {
   const [cartItem, setCartItem] = useState(null)
   const [navbarHidden,setNavbarHidden] = useState(false)
+  const [footerHidden,setFooterHidden] = useState(false)
   
   const sendShoppingItem = (productData) => {
     setCartItem(productData)
@@ -75,6 +77,7 @@ const App = () => {
       <Route path="Brands" element={<Brands/>}></Route>
       <Route path="Information" element={<Information banner = {[bannerImage]} bannerHeader="Tietoa meistä" carousel1 = {[carouselImage1]} carousel2 = {[carouselImage2]}/>}></Route>
       <Route path="ShoppingcartSite" element={<ShoppingcartSite navbarHidingState={setNavbarHidden}/>}></Route>
+      <Route path="Register" element={<Register navbarHidingState={setNavbarHidden} footerHidingState={setFooterHidden} />}></Route>
 
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Nike Airforce 1" price={100} information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Nike Airforce 1" price={100}  information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
@@ -111,7 +114,10 @@ const App = () => {
       <Route path="SkateboardMen/reebok" element={<Reebook callback={sendShoppingItem} skate={[SkateBoardM]} productHeader="Miesten skeittikengät" name="Reebok" price={90} information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: intia"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="SkateboardWomen/reebok" element={<Reebook callback={sendShoppingItem} skate={[SkateBoardW]} productHeader="Naisten skeittikengät" name="Reebok" price={90} information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: intia"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
     </Routes>
-    <Footer/>
+    {footerHidden
+      ? null
+      : <Footer/>
+    }
    </>
   );
 }
