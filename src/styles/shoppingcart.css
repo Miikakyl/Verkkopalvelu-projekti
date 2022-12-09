@@ -52,11 +52,13 @@
 }
 #shoppincartBtn {
     position: relative;
+    padding-bottom: 5px;
     height: 35px;
     border: none;
     background-color: transparent;
 }
 .itemCounter {
+    padding: 0;
     border: 1px solid #102e62;
     color: #102e62;
     background-color: white;
