@@ -75,7 +75,7 @@ const ShoppingcartSite = (props) => {
                 </div>
 
                 <div class="col-12 d-flex justify-content-center m-b-5">
-                    <button id='checkOutButton'>Jatka maksamaan</button>
+                    <Link to="/Format" id='checkOutButton'>Jatka maksamaan</Link>
                 </div>
                 <div class="col-12 d-flex justify-content-center  m-b-5">
                     <Link to="/" id="backButton">
