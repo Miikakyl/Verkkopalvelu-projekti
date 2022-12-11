@@ -6,14 +6,6 @@ import { Link } from "react-router-dom";
 
 function Format (props) {
 
-    const [value, setValue] = useState('');
-
-    const handleChange = event => {
-      const result = event.target.value.replace(/\D/g, '');
-  
-      setValue(result);
-    };
-
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
     let path = `/ShoppingcartSite`; 
@@ -77,7 +69,15 @@ return (
             </div>
 
             <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" value={value} onChange={handleChange} required></input>
+                <input type="text" required></input>
+            </div>
+
+            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                <label>Puhelinnumero*</label>
+            </div>
+
+            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                <input type="text" required></input>
             </div>
 
             <div className="col-xs-12 col-md-12 col-xl-12 p-0">
