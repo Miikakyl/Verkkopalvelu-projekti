@@ -10,7 +10,8 @@ import Basketball from "./components/Basketball"
 import Information from "./components/Information"
 import ShoppingcartSite from "./components/ShoppingcartSite"
 import Register from './components/Register'
-import AdminPanel from './components/AdminPanel'import Format from "./components/Format"
+import AdminPanel from './components/AdminPanel'
+import Format from "./components/Format"
 
 import WalkShoesM from "./Kuvat/Sivustokuvat/photo.jpg"
 import WalkShoesW from "./Kuvat/Sivustokuvat/walkingWomen.jpg"

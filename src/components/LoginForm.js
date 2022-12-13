@@ -48,7 +48,6 @@ function LoginForm() {
     }
     const loginUser = (e) => {
         e.preventDefault()
-        console.log("asd")
         let message = {
             "username": username,
             "pw": password
@@ -97,7 +96,7 @@ function LoginForm() {
                         {adminPanel
                             ? <div className="d-flex flex-column justify-content-center ">
                                 <h2 className="username">{username}</h2>
-                                <Link to="/AdminPanel" className="loggedInLinks">Dashboard</Link>
+                                <Link  to="/AdminPanel" className="loggedInLinks mb-5">Dashboard</Link>
                                 <button onClick={logoutUser} classname="logoutBtn" type="submit">Kirjaudu ulos</button>
                             </div>
                             : <div className="d-flex flex-column justify-content-center ">
