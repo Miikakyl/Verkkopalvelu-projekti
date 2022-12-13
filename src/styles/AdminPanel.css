@@ -1,0 +1,51 @@
+.adminPanelContainer {
+    height: 83.1vh;
+    background-color: #102E62;
+
+}
+.dashboardHeader {
+    color: #F8A700;
+    background-color: #102E62;
+}
+
+.tableHeaders {
+    color: #F8A700;
+}
+
+.dashboardTables {
+    background-color: #314c77;
+}
+.tbody {
+    height: fit-content;
+    width: 500px;
+    scrollbar-color: #f8A700 #07204a;
+    overflow: auto;
+}
+
+.dashboardTables ::-webkit-scrollbar {
+    background: #07204a;
+    width: 3px;
+}
+
+.dashboardTables::-webkit-scrollbar-thumb {
+    background: #f8A700;
+}
+.tableInputs {
+    background-color: #314c77;
+    width: 150px;
+    border:none;
+}
+.submitBtns {
+    background-color: #f8A700;
+    color: #102E62;
+    width: 100px;
+    border: 1px solid #102E62;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+tr,td {
+    padding: 8px;
+}
