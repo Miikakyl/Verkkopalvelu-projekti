@@ -23,10 +23,10 @@ const Shoppingcart = (props) => {
   }
 
   const deleteSamePairs = () => {
-    let samePairs = shoppingCartItems.filter((item => item.name === props.shoppingcartItem.name && item.size ===  props.shoppingcartItem.size && props.shoppingcartItem.color && item.color))
+    let samePairs = shoppingCartItems.filter((item => item.name === props.shoppingcartItem.name && item.size ===  props.shoppingcartItem.size && props.shoppingcartItem.color === item.color))
     props.shoppingcartItem.quantity = samePairs.length +1
     console.log(samePairs)
-    const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.name !== props.shoppingcartItem.name && item.size !==  props.shoppingcartItem.size  && props.shoppingcartItem.color && item.color)
+    const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.name !== props.shoppingcartItem.name && item.size !==  props.shoppingcartItem.size  && props.shoppingcartItem.color !== item.color)
     return shoppingcartWithoutRemoved
 
   }
