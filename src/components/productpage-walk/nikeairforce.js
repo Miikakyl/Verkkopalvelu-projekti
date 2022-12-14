@@ -9,11 +9,12 @@ const Nikeairforce = (props) => {
     const addToCart = (e) => {
         e.preventDefault()
 
-        const productData = {
+        let productData = {
             "name": props.name,
             "color": shoeColor,
             "size": shoeSize,
             "price": props.price,
+            "quantity": 1,
             "uuid": uuid()
 
         }

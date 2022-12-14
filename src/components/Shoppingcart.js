@@ -22,32 +22,34 @@ const Shoppingcart = (props) => {
     setTotalPrice(totalPrice - shoppingCartItems.filter(item => item.uuid === uuid)[0].price)
   }
 
-  const deleteSamePairs = () => {
-    let samePairs = shoppingCartItems.filter((item => item.name === props.shoppingcartItem.name && item.size ===  props.shoppingcartItem.size && props.shoppingcartItem.color === item.color))
-    props.shoppingcartItem.quantity = samePairs.length +1
-    console.log(samePairs)
-    const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.name !== props.shoppingcartItem.name && item.size !==  props.shoppingcartItem.size  && props.shoppingcartItem.color !== item.color)
-    return shoppingcartWithoutRemoved
-
+  const checkIfPicked = () => {
+    let index = shoppingCartItems.findIndex((item => item.name === props.shoppingcartItem.name && item.size == props.shoppingcartItem.size
+    ))
+    if(index !== -1){
+        shoppingCartItems[index].quantity += 1
+        localStorage.removeItem(shoppingCartItems[index])
+        localStorage.setItem('shoppingcart',JSON.stringify(shoppingCartItems))
+        return true;
+    }
+    return false;
   }
 
-  useEffect(() => { /*
-      Tarkastetaan filterillä onko ostoskorissa jo samanlainen kenkäpari samalla koolla, jos on poistetaan kyseinen kenkä ja lisätään
-      uuteen kenkään property kpl +1.
-      */
+  useEffect(() => {
+
     if (props.shoppingcartItem) { 
-      const shoppingcartWithoutSamePairs= deleteSamePairs()
-      setShoppingCartItems([...shoppingcartWithoutSamePairs, props.shoppingcartItem])
-      setTotalPrice(totalPrice + props.shoppingcartItem.price)
-      localStorage.setItem('shoppingcart',JSON.stringify([...shoppingcartWithoutSamePairs, props.shoppingcartItem]))
+        const isPicked = checkIfPicked()
+        if(!isPicked) {
+          setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
+          localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
+        }
+        
     }
     if ('shoppingcart' in localStorage) {
       let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
-
       setShoppingCartItems(oldCart)
       let oldTotal = 0;
       oldCart.forEach((item) => 
-        oldTotal = oldTotal + item.price
+        oldTotal = oldTotal + (item.price * item.quantity)
       )
       setTotalPrice(oldTotal)
     }
