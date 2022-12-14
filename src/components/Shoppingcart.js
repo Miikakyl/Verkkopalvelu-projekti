@@ -22,11 +22,24 @@ const Shoppingcart = (props) => {
     setTotalPrice(totalPrice - shoppingCartItems.filter(item => item.uuid === uuid)[0].price)
   }
 
-  useEffect(() => {
-    if (props.shoppingcartItem) {
-      setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
+  const deleteSamePairs = () => {
+    let samePairs = shoppingCartItems.filter((item => item.name === props.shoppingcartItem.name && item.size ===  props.shoppingcartItem.size && props.shoppingcartItem.color && item.color))
+    props.shoppingcartItem.quantity = samePairs.length +1
+    console.log(samePairs)
+    const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.name !== props.shoppingcartItem.name && item.size !==  props.shoppingcartItem.size  && props.shoppingcartItem.color && item.color)
+    return shoppingcartWithoutRemoved
+
+  }
+
+  useEffect(() => { /*
+      Tarkastetaan filterillä onko ostoskorissa jo samanlainen kenkäpari samalla koolla, jos on poistetaan kyseinen kenkä ja lisätään
+      uuteen kenkään property kpl +1.
+      */
+    if (props.shoppingcartItem) { 
+      const shoppingcartWithoutSamePairs= deleteSamePairs()
+      setShoppingCartItems([...shoppingcartWithoutSamePairs, props.shoppingcartItem])
       setTotalPrice(totalPrice + props.shoppingcartItem.price)
-      localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
+      localStorage.setItem('shoppingcart',JSON.stringify([...shoppingcartWithoutSamePairs, props.shoppingcartItem]))
     }
     if ('shoppingcart' in localStorage) {
       let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
@@ -60,7 +73,7 @@ const Shoppingcart = (props) => {
             <div className="shoppingcartArea p-4 w-100 h-100">
               <h2 className="shoppingcartHeader px-1">Ostoskori</h2>
               {shoppingCartItems.map((item) =>
-                <ShoppingcartItem key={item.uuid} id={item.uuid} name={item.name} kpl={""} price={item.price} vari={item.color} koko={item.size} deleteFunction={deleteShoppingcartItem} />
+                <ShoppingcartItem key={item.uuid} id={item.uuid} kpl={item.quantity} name={item.name} price={item.price} vari={item.color} koko={item.size} deleteFunction={deleteShoppingcartItem} />
               )}
             </div>
             <div className="checkoutBtnArea d-flex flex-column">

@@ -26,8 +26,8 @@ const ShoppingcartItem = (props) => {
                     <div className="productInfoContainer d-flex flex-column align-items-start px-2">
                         <h1 className="productName">{props.name}</h1>
                         <h2 className="productPrice">{props.price}€</h2>
-                        <p className="productInfoText">Kappale: {props.kpl}</p>
                         <p className="productInfoText">Koko: {props.koko}</p>
+                        <p className="productInfoText">kpl: {props.kpl}</p>
                         <p className="productInfoText">Väri: {props.vari}</p>
                     </div>
                     <div>
