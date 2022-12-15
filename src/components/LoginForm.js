@@ -14,9 +14,6 @@ function LoginForm() {
     useEffect(() => {
         
         axios.post('http://localhost:3000/rest_login.php', {},{withCredentials:true}, {
-            headers: {
-                'Content-type': 'application/json'
-            }
         })
             .then((response) => {
                 if(response.data[1] === true) {

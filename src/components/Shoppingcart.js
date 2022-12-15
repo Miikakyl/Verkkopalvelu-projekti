@@ -54,8 +54,7 @@ const Shoppingcart = (props) => {
       setTotalPrice(oldTotal)
     }
   }, [props.shoppingcartItem])
-
-
+  
   return (
     <div className="shoppingcartContainer">
       <button id="shoppincartBtn" onClick={handleClick}>
@@ -75,14 +74,14 @@ const Shoppingcart = (props) => {
             <div className="shoppingcartArea p-4 w-100 h-100">
               <h2 className="shoppingcartHeader px-1">Ostoskori</h2>
               {shoppingCartItems.map((item) =>
-                <ShoppingcartItem key={item.uuid} id={item.uuid} kpl={item.quantity} name={item.name} price={item.price} vari={item.color} koko={item.size} deleteFunction={deleteShoppingcartItem} />
+                <ShoppingcartItem key={item.uuid} deleteFunction={deleteShoppingcartItem} shoppingcartItem={item} shoppingCartItems={shoppingCartItems}/>
               )}
             </div>
             <div className="checkoutBtnArea d-flex flex-column">
             <p className="checkoutTexts mx-4">Tilauksen arvio: {totalPrice}€</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
               <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
-               <Link to="/ShoppingcartSite" className='shoppingcartBtns p-1 mb-2'>Jatka kassalle</Link>
+               <Link to="/ShoppingcartSite" onClick={() => {setShoppingCartItems("")}} className='shoppingcartBtns p-1 mb-2'>Jatka kassalle</Link>
               <button className="shoppingcartBtns p-1 mb-4">Tyhjennä</button>
             </div>
           </>
