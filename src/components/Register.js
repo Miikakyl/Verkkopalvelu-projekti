@@ -51,11 +51,11 @@ const Register = (props) => {
             <div className="row">
                 <div className="col-12">
                     <form className="registerForm" onSubmit={registerUser}>
-                        <img className="logo" src={logo}></img>
+                        <img className="logo" src={logo} alt=""></img>
                         <p className="inputLabels mt-0 mb-2">Sähköposti*</p>
-                        <input className="registerInputs mb-2" type="email" onChange={(e) => { setUsername(e.target.value) }}></input>
+                        <input className="registerInputs mb-2" type="email" onChange={(e) => { setUsername(e.target.value) }} required></input>
                         <p className="inputLabels mb-2">Salasana*</p>
-                        <input className="registerInputs w-100" type="password"onChange={(e) => { setPassword(e.target.value) }}></input>
+                        <input className="registerInputs w-100" type="password"onChange={(e) => { setPassword(e.target.value) }} required></input>
                         <button className="registerButtons mx-0 d-block" type="submit">Luo uusi tunnus</button>
                         <button className="registerButtons mx-0"><Link id="frontPageLink" to="/">Palaa takaisin</Link></button>
                     </form>
