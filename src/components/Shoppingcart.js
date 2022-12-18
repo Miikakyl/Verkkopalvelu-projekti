@@ -22,25 +22,39 @@ const Shoppingcart = (props) => {
     setTotalPrice(totalPrice - shoppingCartItems.filter(item => item.uuid === uuid)[0].price)
   }
 
+  const checkIfPicked = () => {
+    let index = shoppingCartItems.findIndex((item => item.name === props.shoppingcartItem.name && item.size == props.shoppingcartItem.size
+    ))
+    if(index !== -1){
+        shoppingCartItems[index].quantity += 1
+        localStorage.removeItem(shoppingCartItems[index])
+        localStorage.setItem('shoppingcart',JSON.stringify(shoppingCartItems))
+        return true;
+    }
+    return false;
+  }
+
   useEffect(() => {
-    if (props.shoppingcartItem) {
-      setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
-      setTotalPrice(totalPrice + props.shoppingcartItem.price)
-      localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
+
+    if (props.shoppingcartItem) { 
+        const isPicked = checkIfPicked()
+        if(!isPicked) {
+          setShoppingCartItems([...shoppingCartItems, props.shoppingcartItem])
+          localStorage.setItem('shoppingcart',JSON.stringify([...shoppingCartItems, props.shoppingcartItem]))
+        }
+        
     }
     if ('shoppingcart' in localStorage) {
       let oldCart = JSON.parse(localStorage.getItem('shoppingcart'))
-
       setShoppingCartItems(oldCart)
       let oldTotal = 0;
       oldCart.forEach((item) => 
-        oldTotal = oldTotal + item.price
+        oldTotal = oldTotal + (item.price * item.quantity)
       )
       setTotalPrice(oldTotal)
     }
   }, [props.shoppingcartItem])
-
-
+  
   return (
     <div className="shoppingcartContainer">
       <button id="shoppincartBtn" onClick={handleClick}>
@@ -60,14 +74,14 @@ const Shoppingcart = (props) => {
             <div className="shoppingcartArea p-4 w-100 h-100">
               <h2 className="shoppingcartHeader px-1">Ostoskori</h2>
               {shoppingCartItems.map((item) =>
-                <ShoppingcartItem key={item.uuid} id={item.uuid} name={item.name} kpl={""} price={item.price} vari={item.color} koko={item.size} deleteFunction={deleteShoppingcartItem} />
+                <ShoppingcartItem key={item.uuid} deleteFunction={deleteShoppingcartItem} shoppingcartItem={item} shoppingCartItems={shoppingCartItems}/>
               )}
             </div>
             <div className="checkoutBtnArea d-flex flex-column">
             <p className="checkoutTexts mx-4">Tilauksen arvio: {totalPrice}€</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
               <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
-               <Link to="/ShoppingcartSite"><button className="shoppingcartBtns p-1 my-2">Jatka kassalle</button></Link>
+               <Link to="/ShoppingcartSite" onClick={() => {setShoppingCartItems("")}} className='shoppingcartBtns p-1 mb-2'>Jatka kassalle</Link>
               <button className="shoppingcartBtns p-1 mb-4">Tyhjennä</button>
             </div>
           </>

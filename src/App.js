@@ -10,6 +10,7 @@ import Basketball from "./components/Basketball"
 import Information from "./components/Information"
 import ShoppingcartSite from "./components/ShoppingcartSite"
 import Register from './components/Register'
+import AdminPanel from './components/AdminPanel'
 import Format from "./components/Format"
 
 import WalkShoesM from "./Kuvat/Sivustokuvat/photo.jpg"
@@ -79,7 +80,7 @@ const App = () => {
       <Route path="ShoppingcartSite" element={<ShoppingcartSite navbarHidingState={setNavbarHidden}/>}></Route>
       <Route path="Register" element={<Register navbarHidingState={setNavbarHidden} footerHidingState={setFooterHidden} />}></Route>
       <Route path="Format" element={<Format navbarHidingState={setNavbarHidden} footerHidingState={setFooterHidden} />}></Route>
-
+      <Route path="AdminPanel" element={<AdminPanel  footerHidingState={setFooterHidden} />}></Route>
       <Route path="WalkshoesMen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Nike Airforce 1" price={100} information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>
       <Route path="WalkshoesWomen/nikeairforce" element={<NikeAirforce callback={sendShoppingItem} walk={[WalkShoesW]} productHeader="Naisten kävelykengät" name="Nike Airforce 1" price={100}  information={["Istuvuus: normaali", "Ylä: 100% nahka", "Ylävuori: 100% nahka", "Pohjallinen: 100% puuvilla", "Ulkopohja: 100% kumia", "Valimistettu: portugali"]} color={["Musta"]} shoeSize={[38,39,40,41]}/>}></Route>
       <Route path="WalkshoesMen/nikeairforce720" element={<NikeAirforce720 callback={sendShoppingItem} walk={[WalkShoesM]} productHeader="Miesten kävelykengät" name="Nike Airforce 720" price={120} information={["Istuvuus: normaali", "Ylä: 100% puuvilla", "Ylävuori: 100% puuvilla", "Pohjallinen: 100% nahka", "Ulkopohja: 100% kumia", "Valimistettu: italia"]} color={["Musta"]} shoeSize={[40,41,42,44]}/>}></Route>

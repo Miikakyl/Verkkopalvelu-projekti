@@ -63,6 +63,31 @@ span {
     word-break: break-word;
 }
 
+#incrementButton, #decrementButton {
+    background-color: #102E62; 
+    color: #F8A700;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#incrementButton {
+    padding-left: 1em;
+}
+
+#decrementButton {
+    padding-right: 1em;
+}
+
+#amount {
+    margin-bottom: 1em;
+}
+
 @media only screen and (max-width: 768px),
 (max-width: 576px), (max-width: 991px) {
 
@@ -86,7 +111,7 @@ span {
         font-size: 13px;
     }
 
-    #checkOutButton, #backButton {
+    #checkOutButton, #backButton, #incrementButton, #decrementButton {
         font-size: 14px;
     }
 
@@ -98,7 +123,7 @@ span {
         font-size: 11px;
     }
 
-    #checkOutButton, #backButton {
+    #checkOutButton, #backButton, #incrementButton, #decrementButton {
         font-size: 12px;
     }
 
@@ -110,7 +135,7 @@ span {
         font-size: 7px;
     }
 
-    #checkOutButton, #backButton {
+    #checkOutButton, #backButton, #incrementButton, #decrementButton {
         font-size: 9px;
     }
 

@@ -1,0 +1,50 @@
+.adminPanelContainer {
+    background-color: #102E62;
+}
+.dashboardHeader {
+    color: #F8A700;
+    background-color: #102E62;
+}
+
+.tableHeaders {
+    color: #F8A700;
+    width: 500px;
+}
+
+.dashboardTables {
+    background-color: #314c77;
+}
+
+.tableInputs {
+    color: #dbdbdb;
+    background-color: #314c77;
+    width: 200px;
+    border:none;
+}
+
+
+.submitBtns {
+    background-color: #f8A700;
+    color: #102E62;
+    width: fit-content;
+    border: 1px solid #102E62;
+    text-align: center;
+    text-decoration: none;
+}
+
+tr,td {
+    padding: 8px;
+    color: #dbdbdb;
+}
+
+@media screen and (max-width: 991px) {
+  .categoryTable {
+    width: 455px;
+  }
+}
+
+@media screen and (max-width: 469px) {
+    .categoryTable {
+      width: 100vw;
+    }
+  }

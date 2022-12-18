@@ -1,5 +1,5 @@
 import '../styles/LoginForm.css'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -7,37 +7,65 @@ function LoginForm() {
 
     const [isActive, setIsActive] = useState(false)
     const [logged, setLogged] = useState(false)
+    const [adminPanel, setAdminPanel] = useState(false)
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+
+    useEffect(() => {
+        
+        axios.post('http://localhost:3000/rest_login.php', {},{withCredentials:true}, {
+        })
+            .then((response) => {
+                if(response.data[1] === true) {
+                    setAdminPanel(true)
+                    setUsername(response.data[0])
+                    setLogged(true)
+                }
+                else if(response.data[1] === false) {
+                    setLogged(true)
+                    setUsername(response.data[0])
+                }
+            }).catch(error => {
+                alert(error)
+            })
+    },[])
 
     const handleClick = () => {
         setIsActive(!isActive)
     }
     const logoutUser = () => {
-        axios.get('http://localhost:3000/rest_logout.php')
+        axios.post('http://localhost:3000/rest_logout.php',{},{withCredentials:true})
       .then((response) => {
         alert(response.data)
         setLogged(false)
+        setAdminPanel(false)
       }).catch(error => {
         alert(error)
       })
     }
     const loginUser = (e) => {
         e.preventDefault()
-        console.log("asd")
         let message = {
             "username": username,
             "pw": password
         }
 
-        axios.post('http://localhost:3000/rest_login.php', JSON.stringify(message), {
+        axios.post('http://localhost:3000/rest_login.php', JSON.stringify(message),{withCredentials:true}, {
             headers: {
                 'Content-type': 'application/json'
             }
         })
             .then((response) => {
-                alert(response.data)
-                setLogged(true)
+                if(response.data[1] === true) {
+                    setAdminPanel(true)
+                    setLogged(true)
+                }
+                else if(response.data[1] === false) {
+                    setLogged(true)
+                }
+                else{
+                    alert("väärä käyttäjäntunnus tai salasana")
+                }
             }).catch(error => {
                 alert(error)
             })
@@ -61,12 +89,21 @@ function LoginForm() {
 
             <div className="object" style={{ display: isActive ? "block" : "none" }}>
                 {logged
-                    ? <div className="d-flex flex-column justify-content-center ">
-                        <h2 className="username">{username}</h2>
-                        <p className="loggedInLinks">Asiakastiedot</p>
-                        <p className="loggedInLinks">Tilaukset</p>
-                        <button onClick={logoutUser} classname="logoutBtn" type="submit">Kirjaudu ulos</button>
-                    </div>
+                    ? <>
+                        {adminPanel
+                            ? <div className="d-flex flex-column justify-content-center ">
+                                <h2 className="username">{username}</h2>
+                                <Link  to="/AdminPanel" className="loggedInLinks mb-5">Dashboard</Link>
+                                <button onClick={logoutUser} classname="logoutBtn" type="submit">Kirjaudu ulos</button>
+                            </div>
+                            : <div className="d-flex flex-column justify-content-center ">
+                                <h2 className="username">{username}</h2>
+                                <p className="loggedInLinks">Asiakastiedot</p>
+                                <p className="loggedInLinks">Tilaukset</p>
+                                <button onClick={logoutUser} classname="logoutBtn" type="submit">Kirjaudu ulos</button>
+                            </div>
+                        }
+                        </>
                     : <div className="form">
                     <form onSubmit={loginUser}>
 

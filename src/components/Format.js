@@ -1,16 +1,29 @@
 import '../styles/format.css'
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
-function Format (props) {
+function Format(props) {
+    const [paymentOptions, setPaymentOptions] = useState(["Osuuspankki", "Danskebank", "S-Pankki", "Ålandsbaken", "Handelsbanken", "Aktia", "Pop-Pankki"])
+    const [shippingOptions, setShippingOptions] = useState(["Kotiinkuljetus", "Myymälä", "Automaatti"])
 
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-    let path = `/ShoppingcartSite`; 
-    navigate(path);
-  }
+    const [firstname, setFirstname] = useState("")
+    const [lastname, setLastname] = useState("")
+    const [email, setEmail] = useState("")
+    const [address, setAddress] = useState("")
+    const [zipcode, setZipcode] = useState("")
+    const [phonenumber, setPhonenumber] = useState("")
+    const [shipping, setShipping] = useState(paymentOptions[0])
+    const [pay, setPay] = useState(shippingOptions[0])
+    const [totalPrice, setTotalPrice] = useState()
+
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = `/ShoppingcartSite`;
+        navigate(path);
+    }
 
     useEffect(() => {
         props.navbarHidingState(true)
@@ -20,123 +33,143 @@ function Format (props) {
             props.footerHidingState(false)
         }
     }, [])
-       
-  
-return (
-    <div>
-        <div id="format">
-        <div className='container'>
-        <form>
-        <div className='row'>
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <h2>Täytä tiedot</h2>
-            </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Etunimi*</label>
-            </div>
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const userInfo = {
+            "fname": firstname,
+            "lname": lastname,
+            "email": email,
+            "address": address,
+            "zipcode": zipcode,
+            "phone": phonenumber,
+            "shipping": shipping,
+            "payment": pay
+        }
+        const shoppingcart = localStorage.getItem('shoppingcart')
+        const json = {
+            "userInfo": userInfo,
+            "shoppingcart": shoppingcart
+        }
+         axios.post('http://localhost:3000/rest_addCustomersOrder.php', JSON.stringify(json),{withCredentials:true}, {
+         headers: {
+           'Content-type': 'application/json'
+         }
+       })
+         .then((response) => {
+            console.log(response.data)
+         }).catch(error => {
+           alert(error)
+         })
+    }
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" required></input>
-            </div>
+    return (
+        <div>
+            <div id="format">
+                <div className='container'>
+                    <form onSubmit={handleSubmit}>
+                        <div className='row'>
+                            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                <h2>Täytä tiedot</h2>
+                            </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Sukunimi*</label>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Etunimi*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" required></input>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={firstname} onChange={(e) => { setFirstname(e.target.value) }} type="text" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Sähköposti*</label>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Sukunimi*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="email" required></input>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={lastname} onChange={(e) => { setLastname(e.target.value) }} type="text" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Osoite*</label>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Sähköposti*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" required></input>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Postinumero*</label>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Osoite*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" required></input>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={address} onChange={(e) => { setAddress(e.target.value) }} type="text" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <label>Puhelinnumero*</label>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Postinumero*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <input type="text" required></input>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={zipcode} onChange={(e) => { setZipcode(e.target.value) }} type="text" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <h3>Valitse toimitustapa</h3>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <label>Puhelinnumero*</label>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <select>
-                    <option>Automaatti</option>
-                    <option>Myymälä</option>
-                    <option>Kotiinkuljetus</option>
-                </select>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <input value={phonenumber} onChange={(e) => { setPhonenumber(e.target.value) }} type="text" required></input>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <h3>Valitse maksutapa</h3>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <h3>Valitse toimitustapa</h3>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <select>
-                    <option>Nordea</option>
-                    <option>Osuuspankki</option>
-                    <option>Danskebank</option>
-                    <option>S-Pankki</option>
-                    <option>Ålandsbaken</option>
-                    <option>Handelsbanken</option>
-                    <option>Aktia</option>
-                    <option>Pop-Pankki</option>
-                </select>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <select>
+                                        {shippingOptions.map((option =>
+                                            <option value={option} onChange={(e) => { setShipping(e.target.value) }}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <h3>Yhteenveto</h3>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <h3>Valitse maksutapa</h3>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-1 summa">
-                <span>Ostokset yhteensä</span>
-                <span>120</span>
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <select>
+                                        {paymentOptions.map((option =>
+                                            <option value={option} onChange={(e) => { setPay(e.target.value) }}>{option}</option>
+                                        ))}
+                                    </select>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                <button type="submit">Vahvista maksutapahtuma</button>
-                
-            </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <h3>Yhteenveto</h3>
+                                </div>
 
-            <div className="col-xs-12 col-md-12 col-xl-12 p-0">
-                
-                <button onClick={routeChange} type="button">Palaa takaisin ostoskoriin</button>
-                
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-1 summa">
+                                    <span>Ostokset yhteensä</span>
+                                    <span>120</span>
+                                </div>
+
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+                                    <button type="submit">Vahvista maksutapahtuma</button>
+
+                                </div>
+                                <div className="col-xs-12 col-md-12 col-xl-12 p-0">
+
+                                    <button onClick={routeChange} type="button">Palaa takaisin ostoskoriin</button>
+
+                                </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
-       
-         
         </div>
-           
-        </form>
-        </div>
-        </div>
-    </div>
-)
+    )
 
 }
 

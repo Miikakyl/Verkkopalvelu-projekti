@@ -15,6 +15,7 @@ const Nikeblazer = (props) => {
             "color": shoeColor,
             "size": shoeSize,
             "price": props.price,
+            "quantity": 1,
             "uuid": uuid()
 
         }
