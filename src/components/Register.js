@@ -27,7 +27,7 @@ const Register = (props) => {
                 "pw": password
             }
 
-            axios.post('http://localhost/Verkkopalvelu-backend/rest_register.php', JSON.stringify(message), {
+            axios.post('./Verkkopalvelu-backend/rest_register.php', JSON.stringify(message), {
                 headers: {
                     'Content-type': 'application/json'
                 }

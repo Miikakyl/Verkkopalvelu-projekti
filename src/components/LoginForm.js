@@ -13,7 +13,7 @@ function LoginForm() {
 
     useEffect(() => {
         
-        axios.post('http://localhost/Verkkopalvelu-backend/rest_login.php', {},{withCredentials:true}, {
+        axios.post('./Verkkopalvelu-backend/rest_login.php', {},{withCredentials:true}, {
         })
             .then((response) => {
                 if(response.data[1] === true) {

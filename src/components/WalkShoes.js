@@ -81,11 +81,6 @@ function WalkShoes(props) {
 
                 </div>
             </div>
-          
-                
-
-           
-
         </div>
     )
 }
