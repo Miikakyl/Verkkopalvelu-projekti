@@ -69,7 +69,6 @@ const App = () => {
     }
     <Routes>
       <Route path="/" element={<FrontPage/>}></Route>
-      {/* <Route path="mens" element={<Mens/>}></Route> */}
       <Route path="SkateboardWomen" element={<SkateBoard categoryHeader="Naisten skeittikengät" picture={[SkateboardW]}/>}></Route>
       <Route path="SkateboardMen" element={<SkateBoard categoryHeader="Miesten skeittikengät" picture={[SkateboardM]}/>}></Route>
       <Route path="WalkshoesWomen" element={<WalkShoes categoryHeader="Naisten kävelykengät" picture={[WalkingW]}/>}></Route>
