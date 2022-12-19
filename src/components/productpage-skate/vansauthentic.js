@@ -87,11 +87,11 @@ const Vansauthentic = (props) => {
                         <h1>{props.name} {props.price}€</h1>
                         <h4>Valitse väri</h4>
                         <select>
-                            {props.color.map((color) => <option value={color} onClick={(e) => {setShoeColor(e.target.value)}}>{color}</option>)}
+                            {props.color.map((color) => <option key={uuid()}  value={color} onClick={(e) => {setShoeColor(e.target.value)}}>{color}</option>)}
                         </select>
                         <h4>Valitse kokoluokka</h4>
                         <select>
-                            {props.shoeSize.map((size) => <option value={size} onClick={(e) => {setShoeSize(e.target.value)}}>{size}</option>)}
+                            {props.shoeSize.map((size) => <option key={uuid()} value={size} onClick={(e) => {setShoeSize(e.target.value)}}>{size}</option>)}
                         </select>
                         <button type="submit">Lisää koriin</button>
                         </form>
@@ -106,7 +106,7 @@ const Vansauthentic = (props) => {
                         <div className="col-xs-12 col-sm-6 col-md-6 col-xl-6">
                             <h1>Tuotetiedot</h1>
                             <ul>
-                                {props.information.map((information) => <li>{information}</li>)}
+                                {props.information.map((information) => <li key={uuid()} >{information}</li>)}
                             </ul>
                         </div>
 

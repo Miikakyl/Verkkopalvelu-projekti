@@ -27,7 +27,7 @@ const Register = (props) => {
                 "pw": password
             }
 
-            axios.post('http://localhost:3000/rest_register.php', JSON.stringify(message), {
+            axios.post('http://localhost/Verkkopalvelu-backend/rest_register.php', JSON.stringify(message), {
                 headers: {
                     'Content-type': 'application/json'
                 }
@@ -35,6 +35,7 @@ const Register = (props) => {
                 .then((response) => {
                     if(response.data === "Tervetuloa Collect Shoes kantajäseneksi!") {
                         alert(response.data)
+                        localStorage.setItem('shoppingcart',JSON.stringify([]))
                         setTimeout(navigate("/"), 1000)
                     }
                     else {

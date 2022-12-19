@@ -59,6 +59,7 @@ const App = () => {
   const [footerHidden,setFooterHidden] = useState(false)
   
   const sendShoppingItem = (productData) => {
+    setCartItem(null)
     setCartItem(productData)
   }
   return (

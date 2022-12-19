@@ -13,7 +13,7 @@ function LoginForm() {
 
     useEffect(() => {
         
-        axios.post('http://localhost:3000/rest_login.php', {},{withCredentials:true}, {
+        axios.post('http://localhost/Verkkopalvelu-backend/rest_login.php', {},{withCredentials:true}, {
         })
             .then((response) => {
                 if(response.data[1] === true) {
@@ -34,7 +34,7 @@ function LoginForm() {
         setIsActive(!isActive)
     }
     const logoutUser = () => {
-        axios.post('http://localhost:3000/rest_logout.php',{},{withCredentials:true})
+        axios.post('./Verkkopalvelu-backend/rest_logout.php',{},{withCredentials:true})
       .then((response) => {
         alert(response.data)
         setLogged(false)
@@ -50,7 +50,7 @@ function LoginForm() {
             "pw": password
         }
 
-        axios.post('http://localhost:3000/rest_login.php', JSON.stringify(message),{withCredentials:true}, {
+        axios.post('./Verkkopalvelu-backend/rest_login.php', JSON.stringify(message),{withCredentials:true}, {
             headers: {
                 'Content-type': 'application/json'
             }

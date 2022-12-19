@@ -2,11 +2,12 @@ import "../styles/ShoppingcartSite.css"
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import ShoppingcartSiteItem from "./ShoppingcartSiteItem";
+import uuid from 'react-uuid'
 
 
 const ShoppingcartSite = (props) => {
     const [shoppingCartItems, setShoppingCartItems] = useState([])
-    const [totalPrice,setTotalPrice] = useState()
+    const [totalPrice, setTotalPrice] = useState()
 
     const deleteShoppingcartItem = (uuid) => {
         const shoppingcartWithoutRemoved = shoppingCartItems.filter(item => item.uuid !== uuid)
@@ -16,7 +17,7 @@ const ShoppingcartSite = (props) => {
     }
 
     useEffect(() => {
-        
+
         props.navbarHidingState(true)
         setShoppingCartItems(JSON.parse(localStorage.getItem('shoppingcart')))
 
@@ -25,32 +26,42 @@ const ShoppingcartSite = (props) => {
         }
     }, [])
 
+    useEffect(() => {
+        let total = 0;
+
+        let cart = JSON.parse(localStorage.getItem('shoppingcart'))
+        setShoppingCartItems(cart)
+        cart.forEach((item) =>
+            total = total + (item.price * item.quantity)
+        )
+        setTotalPrice(total)
+
+    }, [])
 
     return (
         <div id="Shoppingcart">
 
-            <div class="container">
+            <div className="container">
 
-                <div id='header' class="col-9">
+                <div id='header' className="col-9">
                     <h1>Ostoskori</h1>
                 </div>
 
                 <div></div>
 
                 {shoppingCartItems.map((shoppingcartItem) =>
-                    <ShoppingcartSiteItem shoppingcartItem={shoppingcartItem} deleteShoppingcartItem={deleteShoppingcartItem} />
+                    <ShoppingcartSiteItem key={uuid()} shoppingcartItem={shoppingcartItem} deleteShoppingcartItem={deleteShoppingcartItem} totalPrice={totalPrice} setTotalPrice={setTotalPrice}/>
                 )
                 }
 
-
-                <div id='total' class="col-12">
-                    <p id="totalText">Yhteensä: <span>{totalPrice}</span></p>
+                <div id='total' className="col-12">
+                    <p id="totalText">Yhteensä: <span>{totalPrice}€</span></p>
                 </div>
 
-                <div class="col-12 d-flex justify-content-center m-b-5">
-                    <Link to="/Format" id='checkOutButton' onClick={() => {console.log(shoppingCartItems)}}>Jatka maksamaan</Link>
+                <div className="col-12 d-flex justify-content-center m-b-5">
+                    <Link to="/Format" id='checkOutButton' onClick={() => { console.log(shoppingCartItems) }}>Jatka maksamaan</Link>
                 </div>
-                <div class="col-12 d-flex justify-content-center  m-b-5">
+                <div className="col-12 d-flex justify-content-center  m-b-5">
                     <Link to="/" id="backButton">
                         Takaisin kotisivulle
                     </Link>
