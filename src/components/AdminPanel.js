@@ -13,7 +13,7 @@ const AdminPanel = (props) => {
     useEffect(() => {
         props.footerHidingState(true)
 
-        axios.get('http://localhost:3000/rest_adminPanel.php', { withCredentials: true },)
+        axios.get('./Verkkopalvelu-backend/rest_adminPanel.php', { withCredentials: true },)
             .then((response) => {
                 if (response.data[1] === true) {
                     setProductTable(response.data[0].products)
@@ -35,7 +35,7 @@ const AdminPanel = (props) => {
     }, [, categoryAdded])
 
     const addCategory = () => {
-        axios.post('http://localhost:3000/rest_addCategory.php', JSON.stringify(categoryInput), { withCredentials: true },)
+        axios.post('./Verkkopalvelu-backend/rest_addCategory.php', JSON.stringify(categoryInput), { withCredentials: true },)
             .then((response) => {
                 alert("Kategoria lisätty onnistuneesti")
                 setCategoryAdded(true)

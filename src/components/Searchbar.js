@@ -17,7 +17,7 @@ const Searchbar = () => {
   useEffect(() => {
     setIsLoaded(false)
     if (searchInput !== "") { 
-      axios.post('http://localhost/Verkkopalvelu-backend/rest_search.php', { searchInput: searchInput }, {
+      axios.post('./Verkkopalvelu-backend/rest_search.php', { searchInput: searchInput }, {
         headers: {
           'Content-type': 'application/json'
         }

@@ -9,7 +9,7 @@ const ShoppingcartItem = ({deleteFunction,shoppingcartItem,shoppingCartItems}) =
 
     useEffect(() => {
         setIsLoaded(false)
-        axios.get('http://localhost/Verkkopalvelu-backend/rest_shoppingcartImage.php?productName=' + shoppingcartItem.name)
+        axios.get('./Verkkopalvelu-backend/rest_shoppingcartImage.php?productName=' + shoppingcartItem.name)
             .then((response) => {
                 setIsLoaded(true)
                 shoppingcartItem.image = response.data.kuvaosoite

@@ -1,7 +1,8 @@
 import '../styles/format.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
-import { Link,useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import uuid from 'react-uuid'
 
 
 function Format(props) {
@@ -25,6 +26,14 @@ function Format(props) {
     }
 
     useEffect(() => {
+        
+        let total = 0;
+        let cart = JSON.parse(localStorage.getItem('shoppingcart'))
+        cart.forEach((item) =>
+            total = total + (item.price * item.quantity)
+        )
+        setTotalPrice(total)
+
         props.navbarHidingState(true)
         props.footerHidingState(true)
         return () => {
@@ -52,7 +61,7 @@ function Format(props) {
             "shoppingcart": shoppingcart
         }
         
-         axios.post('http://localhost/Verkkopalvelu-backend/rest_addCustomersOrder.php', JSON.stringify(json),{withCredentials:true}, {
+         axios.post('./Verkkopalvelu-backend/rest_addCustomersOrder.php', JSON.stringify(json),{withCredentials:true}, {
          headers: {
            'Content-type': 'application/json'
          }
@@ -60,7 +69,7 @@ function Format(props) {
          .then((response) => {
             if(response.data === true){
                 alert("Maksutapahtuma on hyväksytty ja tilauksesi lähetettiin eteenpäin")
-                localStorage.setItem('shoppingcart',JSON.stringify([]))
+                localStorage.removeItem('shoppingcart')
                 setTimeout(navigate("/"), 5000)
 
             }
@@ -134,7 +143,7 @@ function Format(props) {
                                 <div className="col-xs-12 col-md-12 col-xl-12 p-0">
                                     <select>
                                         {shippingOptions.map((option =>
-                                            <option value={option} onClick={(e) => { setShipping(e.target.value) }}>{option}</option>
+                                            <option key={uuid()} value={option} onClick={(e) => { setShipping(e.target.value) }}>{option}</option>
                                         ))}
                                     </select>
                                 </div>
@@ -146,7 +155,7 @@ function Format(props) {
                                 <div className="col-xs-12 col-md-12 col-xl-12 p-0">
                                     <select>
                                         {paymentOptions.map((option =>
-                                            <option value={option} onClick={(e) => { setPay(e.target.value) }}>{option}</option>
+                                            <option key={uuid()} value={option} onClick={(e) => { setPay(e.target.value) }}>{option}</option>
                                         ))}
                                     </select>
                                 </div>
@@ -157,7 +166,7 @@ function Format(props) {
 
                                 <div className="col-xs-12 col-md-12 col-xl-12 p-1 summa">
                                     <span>Ostokset yhteensä</span>
-                                    <span>120</span>
+                                    <span>{totalPrice}€</span>
                                 </div>
 
                                 <div className="col-xs-12 col-md-12 col-xl-12 p-0">
@@ -167,7 +176,6 @@ function Format(props) {
                                 <div className="col-xs-12 col-md-12 col-xl-12 p-0">
 
                                     <button onClick={routeChange} type="button">Palaa takaisin ostoskoriin</button>
-
                                 </div>
                         </div>
 
