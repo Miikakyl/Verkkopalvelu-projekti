@@ -27,7 +27,7 @@ const Register = (props) => {
                 "pw": password
             }
 
-            axios.post('./Verkkopalvelu-backend/rest_register.php', JSON.stringify(message), {
+            axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_register.php', JSON.stringify(message), {
                 headers: {
                     'Content-type': 'application/json'
                 }
@@ -36,7 +36,7 @@ const Register = (props) => {
                     if(response.data === "Tervetuloa Collect Shoes kantajäseneksi!") {
                         alert(response.data)
                         localStorage.setItem('shoppingcart',JSON.stringify([]))
-                        setTimeout(navigate("/"), 1000)
+                        setTimeout(navigate("../~n1kymi00"), 1000)
                     }
                     else {
                         alert(response.data)
@@ -48,7 +48,7 @@ const Register = (props) => {
     }
 
     function Back () {
-        navigate("/")
+        navigate("../~n1kymi00")
       }
 
     return (

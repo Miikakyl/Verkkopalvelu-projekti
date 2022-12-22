@@ -5,16 +5,16 @@ import uuid from 'react-uuid'
 
 
 const Yeezy = (props) => {
-    const [shoeColor, setShoeColor] = useState(props.color[0])
-    const [shoeSize, setShoeSize] = useState(props.shoeSize[0])
+    const [shoeColor, setShoeColor] = useState("")
+    const [shoeSize, setShoeSize] = useState("")
 
     const addToCart = (e) => {
         e.preventDefault()
 
         let productData = {
             "name": props.name,
-            "color": shoeColor,
-            "size": shoeSize,
+            "color": shoeColor ? shoeColor : props.color[0],
+            "size": shoeSize ? shoeSize : props.shoeSize[0],
             "price": props.price,
             "quantity": 1,
             "uuid": uuid()

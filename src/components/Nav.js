@@ -16,7 +16,7 @@ const Nav = (props) => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul className="navbar-nav mx-0 mb-2 mb-lg-0 d-flex">
             <li className='nav-item'>
-              <Link className='nav-link' to="/">Kotisivu</Link>
+              <Link className='nav-link' to="~n1kymi00">Kotisivu</Link>
             </li>
 
             <li className="nav-item dropdown">
@@ -24,9 +24,9 @@ const Nav = (props) => {
                 Miehet
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMen">
-                <Link to="/WalkshoesMen" className="dropdown-item">Kävelykengät</Link>
-                <Link to="/BasketballMen" className="dropdown-item">Koripallokengät</Link>
-                <Link to="/SkateboardMen" className="dropdown-item">Skeittikengät</Link>
+                <Link to="~n1kymi00/WalkshoesMen" className="dropdown-item">Kävelykengät</Link>
+                <Link to="~n1kymi00/BasketballMen" className="dropdown-item">Koripallokengät</Link>
+                <Link to="~n1kymi00/SkateboardMen" className="dropdown-item">Skeittikengät</Link>
               </div>
             </li>
 
@@ -35,17 +35,17 @@ const Nav = (props) => {
                 Naiset
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownWomen">
-                <Link to="/WalkshoesWomen" className="dropdown-item">Kävelykengät</Link>
-                <Link to="/BasketballWomen" className="dropdown-item">Koripallokengät</Link>
-                <Link to="/SkateboardWomen" className="dropdown-item">Skeittikengät</Link>
+                <Link to="~n1kymi00/WalkshoesWomen" className="dropdown-item">Kävelykengät</Link>
+                <Link to="~n1kymi00/BasketballWomen" className="dropdown-item">Koripallokengät</Link>
+                <Link to="~n1kymi00/SkateboardWomen" className="dropdown-item">Skeittikengät</Link>
               </div>
             </li>
 
             <li className='nav-item'>
-              <Link className='nav-link' to="/Brands">Brandit</Link>
+              <Link className='nav-link' to="~n1kymi00/Brands">Brandit</Link>
             </li>
             <li className="nav-item">
-              <Link className='nav-link' to="/Information">Tietoa meistä</Link>
+              <Link className='nav-link' to="~n1kymi00/Information">Tietoa meistä</Link>
             </li>
           </ul>
         </div>

@@ -17,9 +17,9 @@ const FrontPage = () => {
                 <AdvertisementBanner />
             </div>
             <div className="row mx-0 my-1 d-flex flex-lg-nowrap">
-                <ProductCategory womenLink={"/WalkShoesWomen"} menLink={"/WalkShoesMen"} image={kavelyImage} categoryName={"Kävelykengät"} />
-                <ProductCategory  womenLink={"/BasketballWomen"} menLink={"/BasketballMen"} image={koripalloImage} categoryName={"Koripallokengät"} />
-                <ProductCategory womenLink={"/SkateBoardWomen"} menLink={"/SkateBoardMen"} image={skeittiImage} categoryName={"Skeittikengät"} />
+                <ProductCategory womenLink={"../~n1kymi00/WalkShoesWomen"} menLink={"../~n1kymi00/WalkShoesMen"} image={kavelyImage} categoryName={"Kävelykengät"} />
+                <ProductCategory  womenLink={"../~n1kymi00/BasketballWomen"} menLink={"../~n1kymi00/BasketballMen"} image={koripalloImage} categoryName={"Koripallokengät"} />
+                <ProductCategory womenLink={"../~n1kymi00/SkateBoardWomen"} menLink={"../~n1kymi00/SkateBoardMen"} image={skeittiImage} categoryName={"Skeittikengät"} />
             </div>
         </div>
     );

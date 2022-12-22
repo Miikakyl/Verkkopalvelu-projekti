@@ -59,10 +59,10 @@ const ShoppingcartSite = (props) => {
                 </div>
 
                 <div className="col-12 d-flex justify-content-center m-b-5">
-                    <Link to="/Format" id='checkOutButton' onClick={() => { console.log(shoppingCartItems) }}>Jatka maksamaan</Link>
+                    <Link to="../~n1kymi00/Format" id='checkOutButton'>Jatka maksamaan</Link>
                 </div>
                 <div className="col-12 d-flex justify-content-center  m-b-5">
-                    <Link to="/" id="backButton">
+                    <Link to="../~n1kymi00" id="backButton">
                         Takaisin kotisivulle
                     </Link>
                 </div>

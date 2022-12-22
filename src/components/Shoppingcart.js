@@ -81,7 +81,7 @@ const Shoppingcart = (props) => {
             <p className="checkoutTexts mx-4">Tilauksen arvio: {totalPrice}€</p>
               <p className="checkoutTexts mx-4">Toimituksen kustannukset: 4,99€</p>
               <p className="checkoutTexts mx-4">Yhteensä: {totalPrice + 4.99}€</p>
-               <Link to="/ShoppingcartSite" onClick={() => {setShoppingCartItems([])}} className='shoppingcartBtns p-1 mb-2'>Jatka kassalle</Link>
+               <Link to="../~n1kymi00/ShoppingcartSite" onClick={() => {setShoppingCartItems([])}} className='shoppingcartBtns p-1 mb-2'>Jatka kassalle</Link>
               <button className="shoppingcartBtns p-1 mb-4">Tyhjennä</button>
             </div>
           </>

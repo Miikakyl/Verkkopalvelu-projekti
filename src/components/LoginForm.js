@@ -13,7 +13,7 @@ function LoginForm() {
 
     useEffect(() => {
         
-        axios.post('./Verkkopalvelu-backend/rest_login.php', {},{withCredentials:true}, {
+        axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_login.php', {},{withCredentials:true}, {
         })
             .then((response) => {
                 if(response.data[1] === true) {
@@ -34,7 +34,7 @@ function LoginForm() {
         setIsActive(!isActive)
     }
     const logoutUser = () => {
-        axios.post('./Verkkopalvelu-backend/rest_logout.php',{},{withCredentials:true})
+        axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_logout.php',{},{withCredentials:true})
       .then((response) => {
         alert(response.data)
         setLogged(false)
@@ -50,7 +50,7 @@ function LoginForm() {
             "pw": password
         }
 
-        axios.post('./Verkkopalvelu-backend/rest_login.php', JSON.stringify(message),{withCredentials:true}, {
+        axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_login.php', JSON.stringify(message),{withCredentials:true}, {
             headers: {
                 'Content-type': 'application/json'
             }
@@ -93,7 +93,7 @@ function LoginForm() {
                         {adminPanel
                             ? <div className="d-flex flex-column justify-content-center ">
                                 <h2 className="username">{username}</h2>
-                                <Link  to="/AdminPanel" className="loggedInLinks mb-5">Dashboard</Link>
+                                <Link to="../~n1kymi00/AdminPanel" className="loggedInLinks mb-5">Dashboard</Link>
                                 <button onClick={logoutUser} classname="logoutBtn" type="submit">Kirjaudu ulos</button>
                             </div>
                             : <div className="d-flex flex-column justify-content-center ">
@@ -123,7 +123,7 @@ function LoginForm() {
 
                     <div className="form-register">
                         <button>
-                            <Link className="registerLink" to="/register">Rekisteröidy asiakkaaksi</Link>
+                            <Link className="registerLink" to="../~n1kymi00/register">Rekisteröidy asiakkaaksi</Link>
                         </button>
                     </div>
                 </div>

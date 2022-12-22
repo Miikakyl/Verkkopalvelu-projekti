@@ -2,6 +2,7 @@ import react, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import '../styles/AdminPanel.css'
+import uuid from 'react-uuid'
 
 const AdminPanel = (props) => {
     const [productTable, setProductTable] = useState([])
@@ -13,7 +14,7 @@ const AdminPanel = (props) => {
     useEffect(() => {
         props.footerHidingState(true)
 
-        axios.get('./Verkkopalvelu-backend/rest_adminPanel.php', { withCredentials: true },)
+        axios.get('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_adminPanel.php', { withCredentials: true },)
             .then((response) => {
                 if (response.data[1] === true) {
                     setProductTable(response.data[0].products)
@@ -21,7 +22,7 @@ const AdminPanel = (props) => {
                 }
                 else {
                     alert(response.data[0])
-                    setTimeout(navigate('/'), 1000);
+                    setTimeout(navigate('../~n1kymi00'), 1000);
                 }
             })
             .catch((error) => {
@@ -35,7 +36,7 @@ const AdminPanel = (props) => {
     }, [, categoryAdded])
 
     const addCategory = () => {
-        axios.post('./Verkkopalvelu-backend/rest_addCategory.php', JSON.stringify(categoryInput), { withCredentials: true },)
+        axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_addCategory.php', JSON.stringify(categoryInput), { withCredentials: true },)
             .then((response) => {
                 alert("Kategoria lisätty onnistuneesti")
                 setCategoryAdded(true)
@@ -60,7 +61,7 @@ const AdminPanel = (props) => {
                 <div className="col-lg-6 col-sm-12 p-0 d-flex flex-column align-items-center">
                     <div>
                         <h2 className="tableHeaders mb-3 d-inline">Kategoriat</h2>
-                        <table className=" dashboardTables categoryTable">
+                        <table className="dashboardTables categoryTable">
                             <thead>
                                 <tr>
                                     <th>Tuoteryhma-tunnus</th>
@@ -95,7 +96,7 @@ const AdminPanel = (props) => {
                             </thead>
                             <tbody className="tbody">
                                 {productTable?.map((product =>
-                                    <tr>
+                                    <tr key={uuid()}>
                                         <td>{product.tuoteId}</td>
                                         <td>{product.trnro}</td>
                                         <td>{product.tuotenimi}</td>

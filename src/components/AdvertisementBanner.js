@@ -7,7 +7,7 @@ const AdvertisementBanner = () => {
     let navigate = useNavigate();
 
     function register() {
-        navigate("/register")
+        navigate("../~n1kymi00/register")
     }
 
     return (

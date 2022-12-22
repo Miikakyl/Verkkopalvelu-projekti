@@ -17,7 +17,7 @@ const Searchbar = () => {
   useEffect(() => {
     setIsLoaded(false)
     if (searchInput !== "") { 
-      axios.post('./Verkkopalvelu-backend/rest_search.php', { searchInput: searchInput }, {
+      axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_search.php', { searchInput: searchInput }, {
         headers: {
           'Content-type': 'application/json'
         }
@@ -65,7 +65,7 @@ const Searchbar = () => {
                   <p className="resultCounter">Haullesi löytyi {resultCounter} tuotetta!</p>
                   {
                     productResults.map((product) =>
-                      <SearchProduct name={product.tuotenimi} image={require('../' + product.kuvaosoite)} price={product.hinta} womenLink={product.tuoteosoiteN} menLink={product.tuoteosoiteM} />
+                      <SearchProduct name={product.tuotenimi} image={require('../' + product.kuvaosoite)} price={product.hinta} womenLink={"../~n1kymi00"+ product.tuoteosoiteN} menLink={"../~n1kymi00"+ product.tuoteosoiteM} />
                     )
                   }
                 </>

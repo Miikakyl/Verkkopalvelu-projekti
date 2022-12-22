@@ -21,7 +21,7 @@ function Format(props) {
     const navigate = useNavigate()
 
     const routeChange = () => {
-        let path = `/ShoppingcartSite`;
+        let path = `../~n1kymi00/ShoppingcartSite`;
         navigate(path);
     }
 
@@ -61,7 +61,7 @@ function Format(props) {
             "shoppingcart": shoppingcart
         }
         
-         axios.post('./Verkkopalvelu-backend/rest_addCustomersOrder.php', JSON.stringify(json),{withCredentials:true}, {
+         axios.post('https://www.students.oamk.fi/~n1kymi00/Verkkopalvelu-backend/rest_addCustomersOrder.php', JSON.stringify(json),{withCredentials:true}, {
          headers: {
            'Content-type': 'application/json'
          }
@@ -70,7 +70,7 @@ function Format(props) {
             if(response.data === true){
                 alert("Maksutapahtuma on hyväksytty ja tilauksesi lähetettiin eteenpäin")
                 localStorage.removeItem('shoppingcart')
-                setTimeout(navigate("/"), 5000)
+                setTimeout(navigate("../~n1kymi00"), 5000)
 
             }
          }).catch(error => {
@@ -81,7 +81,7 @@ function Format(props) {
     return (
         <div>
             <div id="format">
-                <div className='container'>
+                <div className='container mt-0'>
                     <form onSubmit={handleSubmit}>
                         <div className='row'>
                             <div className="col-xs-12 col-md-12 col-xl-12 p-0">
